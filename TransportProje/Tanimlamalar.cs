@@ -29,7 +29,7 @@ namespace TransportProje
             catch (Exception Hata)
             {
                 //sistem hata mesajı
-                MessageBox.Show(Hata.Message, "Bağlantı Açma Hata Penceresi");
+                MessageBox.Show(Hata.Message, "Bağlantı Hatası");
             }
         }
 
@@ -133,6 +133,27 @@ namespace TransportProje
         }
 
 
+        public void SoforListele()
+        {
+            try
+            {
+                BaglantiAc();
+                DataSet ds = new DataSet();   //Dataset tanımla
+                string Sorgu = "Select *from Sofor "; //Sql Komutunu yaz
+                OleDbDataAdapter da = new OleDbDataAdapter(Sorgu, Baglanti);
+                da.Fill(ds, "Sofor");
+                dataGridView1.DataSource = ds.Tables["Sofor"]; //Soför Takip tablosunu formda gösterdik
+                Baglanti.Close();
+
+            }
+            catch (Exception Hata)
+            {
+
+                MessageBox.Show(Hata.Message, "Soför Listele Hata Penceresi");
+            }
+        }
+
+
         private void uygulamadanÇıkToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Programdan Çıkamak İstiyor musunuz ? ", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
@@ -179,6 +200,67 @@ namespace TransportProje
         private void yakitTakipListeleToolStripMenuItem_Click(object sender, EventArgs e)
         {
             YakitTakip();
+        }
+
+        private void çekiciEkleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CekiciEkle frmekle = new CekiciEkle();
+            frmekle.Show();
+            this.Hide();
+        }
+
+        private void kullanıcıDeğiştirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Login frmlogin = new Login();
+            frmlogin.Show();
+            this.Hide();
+
+        }
+
+        private void Tanimlamalar_Activated(object sender, EventArgs e)
+        {
+            Baglanti.Close();
+            Trucks();
+        }
+
+        private void dorseEkleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DorseEkle frmekledorse = new DorseEkle();
+            frmekledorse.Show();
+            this.Hide();
+        }
+
+        private void soförListeleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SoforListele();
+        }
+
+        private void soförEkleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SoforEkle frmeklesofor = new SoforEkle();
+            frmeklesofor.Show();
+            this.Hide();
+        }
+
+        private void personelEkleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PersonelEkle frmeklepersonel = new PersonelEkle();
+            frmeklepersonel.Show();
+            this.Hide();
+        }
+
+        private void girişEkleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UyeEkle frmuyeekle = new UyeEkle();
+            frmuyeekle.Show();
+            this.Hide();
+        }
+
+        private void yakıtTakipEkleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            YakitTakipEkle frmyakitekle = new YakitTakipEkle();
+            frmyakitekle.Show();
+            this.Hide();
         }
     }
 }

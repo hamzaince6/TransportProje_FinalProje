@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CekiciEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CekiciEkle.Designer.cs">
+      <DependentUpon>CekiciEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DorseEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DorseEkle.Designer.cs">
+      <DependentUpon>DorseEkle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,14 +76,44 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="PersonelEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelEkle.Designer.cs">
+      <DependentUpon>PersonelEkle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SoforEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SoforEkle.Designer.cs">
+      <DependentUpon>SoforEkle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tanimlamalar.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Tanimlamalar.Designer.cs">
       <DependentUpon>Tanimlamalar.cs</DependentUpon>
     </Compile>
+    <Compile Include="UyeEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UyeEkle.Designer.cs">
+      <DependentUpon>UyeEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YakitTakipEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YakitTakipEkle.Designer.cs">
+      <DependentUpon>YakitTakipEkle.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CekiciEkle.resx">
+      <DependentUpon>CekiciEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DorseEkle.resx">
+      <DependentUpon>DorseEkle.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -80,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelEkle.resx">
+      <DependentUpon>PersonelEkle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -91,8 +136,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SoforEkle.resx">
+      <DependentUpon>SoforEkle.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Tanimlamalar.resx">
       <DependentUpon>Tanimlamalar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UyeEkle.resx">
+      <DependentUpon>UyeEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YakitTakipEkle.resx">
+      <DependentUpon>YakitTakipEkle.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -117,6 +171,9 @@
     <None Include="Resources\8727689.png" />
     <None Include="Resources\Main1.jpg" />
     <None Include="Resources\Main.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2180133.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

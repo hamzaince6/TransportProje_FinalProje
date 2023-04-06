@@ -63,6 +63,16 @@ namespace TransportProje.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _2180133 {
+            get {
+                object obj = ResourceManager.GetObject("2180133", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _8727689 {
             get {
                 object obj = ResourceManager.GetObject("8727689", resourceCulture);
