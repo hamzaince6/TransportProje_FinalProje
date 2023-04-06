@@ -130,5 +130,13 @@ namespace TransportProje
         {
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            SatisFatura frmsatis = new SatisFatura();
+            frmsatis.Show();
+            this.Hide();
+
+        }
     }
 }

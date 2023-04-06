@@ -84,6 +84,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SatisFatura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SatisFatura.Designer.cs">
+      <DependentUpon>SatisFatura.cs</DependentUpon>
+    </Compile>
     <Compile Include="SoforEkle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +142,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SatisFatura.resx">
+      <DependentUpon>SatisFatura.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SoforEkle.resx">
       <DependentUpon>SoforEkle.cs</DependentUpon>
     </EmbeddedResource>

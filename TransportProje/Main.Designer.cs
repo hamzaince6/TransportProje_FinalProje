@@ -89,6 +89,7 @@ namespace TransportProje
             this.button4.Size = new System.Drawing.Size(265, 256);
             this.button4.TabIndex = 3;
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 

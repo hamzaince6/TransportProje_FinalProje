@@ -40,17 +40,18 @@ namespace TransportProje
                 EkleKomut.Parameters.AddWithValue("@SasiNo", txtsasino.Text);
                 EkleKomut.Parameters.AddWithValue("@RuhsatNo", txtruhsatno.Text);
                 EkleKomut.Parameters.AddWithValue("@RusatVerilenYer", cmbruhsatverilenyer.Text);
-                EkleKomut.Parameters.AddWithValue("@HGSNo", txthgsno.Text);
                 EkleKomut.Parameters.AddWithValue("@Netagirlik", txtagirlik.Text);
                 EkleKomut.Parameters.AddWithValue("@Bayrak", cmbbayrak.Text);
-                EkleKomut.Parameters.AddWithValue("@En", cmben.Text);
-                EkleKomut.Parameters.AddWithValue("@Boy", cmbboy.Text);
-                EkleKomut.Parameters.AddWithValue("@Yükseklik", cmbyukseklik.Text);
-                EkleKomut.Parameters.AddWithValue("@BosAgirlik", cmbbosagirlik.Text);
                 if (radyerli.Checked == true)
                     EkleKomut.Parameters.AddWithValue("@YerliYabanci", "Yerli");
                 else if (radyabanci.Checked == true)
                     EkleKomut.Parameters.AddWithValue("@YerliYabanci", "Yabanci");
+                EkleKomut.Parameters.AddWithValue("@HGSNo", txthgsno.Text);
+                EkleKomut.Parameters.AddWithValue("@Boy", cmbboy.Text);
+                EkleKomut.Parameters.AddWithValue("@En", cmben.Text);
+                EkleKomut.Parameters.AddWithValue("@Yükseklik", cmbyukseklik.Text);
+                EkleKomut.Parameters.AddWithValue("@BosAgirlik", cmbbosagirlik.Text);
+                
 
                 if (EkleKomut.ExecuteNonQuery() == 1)
                     MessageBox.Show("Başarıyla Kayıt Eklendi");
