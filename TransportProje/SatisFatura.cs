@@ -99,5 +99,193 @@ namespace TransportProje
             this.Close();
             
         }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (BoslukKontrol() == true)
+                MessageBox.Show("Boş alanlara veri giriniz.", "DİKKAT");
+            else
+                KayitEkle();
+        }
+
+
+        public void KayitEkle()
+        {
+            try
+            {
+                Tanimlamalar.BaglantiAc();
+                string Sorgu = "Insert Into SatisFatura (FaturaNo,BelgeNo,Musteri,FaturaDovizi,FaturaTarihi,VadeTarihi,MusteriTemsilcisi,FaturaTuru,Fiyat,DovizTutar,TLTutar,KdvOrani,Aciklama) Values (@FaturaNo,@BelgeNo,@Musteri,@FaturaDovizi,@FaturaTarihi,@VadeTarihi,@MusteriTemsilcisi,@FaturaTuru,@Fiyat,@DovizTutar,@TLTutar,@KdvOrani,@Aciklama)";
+                OleDbCommand EkleKomut = new OleDbCommand(Sorgu, Tanimlamalar.Baglanti);
+                EkleKomut.Parameters.AddWithValue("@FaturaNo", txtfaturano.Text);
+                EkleKomut.Parameters.AddWithValue("@BelgeNo", txtbelgeno.Text);
+                EkleKomut.Parameters.AddWithValue("@Musteri", txtmusteri.Text);
+                EkleKomut.Parameters.AddWithValue("@FaturaDovizi", cmbdovizturu.Text);
+                EkleKomut.Parameters.AddWithValue("@FaturaTarihi", txtfaturatarihi.Text);
+                EkleKomut.Parameters.AddWithValue("@VadeTarihi", txtvadetarihi.Text);
+                EkleKomut.Parameters.AddWithValue("@MusteriTemsilcisi", txtmustertitemsilci.Text);
+                EkleKomut.Parameters.AddWithValue("@FaturaTuru", cmbfaturaturu.Text);
+                EkleKomut.Parameters.AddWithValue("@Fiyat", txtfiyat.Text);
+                EkleKomut.Parameters.AddWithValue("@DovizTutar", txtdoviztutar.Text);
+                EkleKomut.Parameters.AddWithValue("@TLTutar", txttltutar.Text);
+                EkleKomut.Parameters.AddWithValue("@KdvOrani", cmbkdvorani.Text);
+                EkleKomut.Parameters.AddWithValue("@Aciklama", txtaciklama.Text);
+                if (EkleKomut.ExecuteNonQuery() == 1)
+                    MessageBox.Show("Başarıyla Kayıt Eklendi");
+                Tanimlamalar.Baglanti.Close();
+
+            }
+            catch (Exception Hata)
+            {
+
+                MessageBox.Show(Hata.Message, "Kayıt Ekleme Hata Penceresi");
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Main frmgeri = new Main();
+            frmgeri.Show();
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            txtfaturano.Text = "";
+            txtbelgeno.Text = "";
+            txtmusteri.Text = "";
+            cmbdovizturu.Text = "";
+            txtfaturatarihi.Text = "";
+            txtvadetarihi.Text = "";
+            txtmustertitemsilci.Text = "";
+            cmbfaturaturu.Text = "";
+            txtfiyat.Text = "";
+            txtdoviztutar.Text = "";
+            txttltutar.Text = "";
+            cmbkdvorani.Text = "";
+            txtaciklama.Text = "";
+        }
+
+        public bool BoslukKontrol()
+        {
+            bool bos = false; //tüm alanlar dolu
+            txtfaturano.BackColor = Color.White;
+            txtbelgeno.BackColor = Color.White;
+            txtmusteri.BackColor = Color.White;
+            cmbdovizturu.BackColor = Color.White;
+            txtfaturatarihi.BackColor = Color.White;
+            txtvadetarihi.BackColor = Color.White;
+            txtmustertitemsilci.BackColor = Color.White;
+            cmbfaturaturu.BackColor = Color.White;
+            txtfiyat.BackColor = Color.White;
+            txtdoviztutar.BackColor = Color.White;
+            txttltutar.BackColor = Color.White;
+            cmbkdvorani.BackColor = Color.White;
+            txtaciklama.BackColor = Color.White;
+
+            if (cmbdovizturu.Text == "Döviz Seçiniz" || cmbdovizturu.Text == "")
+            {
+                cmbdovizturu.BackColor = Color.DarkRed;
+                cmbdovizturu.Focus();
+                bos = true;
+
+            }
+
+            if (cmbfaturaturu.Text == "Fatura Türünü Seçiniz" || cmbfaturaturu.Text == "")
+            {
+                cmbfaturaturu.BackColor = Color.DarkRed;
+                cmbfaturaturu.Focus();
+                bos = true;
+
+            }
+
+            if (cmbkdvorani.Text == "KDV Oranı Seçiniz" || cmbkdvorani.Text == "")
+            {
+                cmbkdvorani.BackColor = Color.DarkRed;
+                cmbkdvorani.Focus();
+                bos = true;
+
+            }
+
+            if (txtfaturano.Text == "")
+            {
+                txtfaturano.BackColor = Color.DarkRed;
+                txtfaturano.Focus();
+                bos = true;
+
+            }
+
+            if (txtbelgeno.Text == "")
+            {
+                txtbelgeno.BackColor = Color.DarkRed;
+                txtbelgeno.Focus();
+                bos = true;
+
+            }
+
+            if (txtmusteri.Text == "")
+            {
+                txtmusteri.BackColor = Color.DarkRed;
+                txtmusteri.Focus();
+                bos = true;
+
+            }
+
+            if (txtfaturatarihi.Text == "")
+            {
+                txtfaturatarihi.BackColor = Color.DarkRed;
+                txtfaturatarihi.Focus();
+                bos = true;
+
+            }
+
+            if (txtmustertitemsilci.Text == "")
+            {
+                txtmustertitemsilci.BackColor = Color.DarkRed;
+                txtmustertitemsilci.Focus();
+                bos = true;
+
+            }
+
+            if (txtfiyat.Text == "")
+            {
+                txtfiyat.BackColor = Color.DarkRed;
+                txtfiyat.Focus();
+                bos = true;
+
+            }
+
+            if (txtdoviztutar.Text == "")
+            {
+                txtdoviztutar.BackColor = Color.DarkRed;
+                txtdoviztutar.Focus();
+                bos = true;
+
+            }
+
+            if (txttltutar.Text == "")
+            {
+                txttltutar.BackColor = Color.DarkRed;
+                txttltutar.Focus();
+                bos = true;
+
+            }
+
+            if (txtaciklama.Text == "")
+            {
+                txtaciklama.BackColor = Color.DarkRed;
+                txtaciklama.Focus();
+                bos = true;
+
+            }
+
+            return bos;
+
+        }
+
     }
 }
