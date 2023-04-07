@@ -90,6 +90,12 @@
     <Compile Include="SatisFatura.Designer.cs">
       <DependentUpon>SatisFatura.cs</DependentUpon>
     </Compile>
+    <Compile Include="SatisFaturaListele.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SatisFaturaListele.Designer.cs">
+      <DependentUpon>SatisFaturaListele.cs</DependentUpon>
+    </Compile>
     <Compile Include="SoforEkle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +150,9 @@
     </Compile>
     <EmbeddedResource Include="SatisFatura.resx">
       <DependentUpon>SatisFatura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SatisFaturaListele.resx">
+      <DependentUpon>SatisFaturaListele.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SoforEkle.resx">
       <DependentUpon>SoforEkle.cs</DependentUpon>

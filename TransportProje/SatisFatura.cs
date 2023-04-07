@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
+using System.Data.OleDb;
 
 namespace TransportProje
 {
@@ -91,6 +92,12 @@ namespace TransportProje
             DovizGoster();
         }
 
-
+        private void toolStripDropDownButton3_Click(object sender, EventArgs e)
+        {
+            SatisFaturaListele frmfaturalistele = new SatisFaturaListele();
+            frmfaturalistele.ShowDialog();
+            this.Close();
+            
+        }
     }
 }
