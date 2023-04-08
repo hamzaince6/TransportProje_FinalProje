@@ -274,5 +274,62 @@ namespace TransportProje
             this.Hide();
            
         }
+
+        private void dorseSilToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DorseSil frmsil = new DorseSil();
+            frmsil.txtkimlik.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            frmsil.txtkullanimalani.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            frmsil.txtmodelyili.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            frmsil.txtsasino.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+            frmsil.ShowDialog();
+            this.Hide();
+        }
+
+        private void soförSilToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SoforSil frmsil = new SoforSil();
+            frmsil.txtkimlik.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            frmsil.txtad.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            frmsil.txtsoyad.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            frmsil.txttcno.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            frmsil.txtehliyetno.Text = dataGridView1.CurrentRow.Cells[12].Value.ToString();
+            frmsil.ShowDialog();
+            this.Hide();
+        }
+
+        private void personelSilToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PersonelSil frmsil = new PersonelSil();
+            frmsil.txtkimlik.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            frmsil.txtad.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            frmsil.txtsoyad.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            frmsil.txttcno.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            frmsil.txttelefon.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+            frmsil.ShowDialog();
+            this.Hide();
+        }
+
+        private void üyeSilToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UyeSil frmsil = new UyeSil();
+            frmsil.txtkimlik.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            frmsil.txtkad.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            frmsil.txtsifre.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            frmsil.txtmail.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            frmsil.ShowDialog();
+            this.Hide();
+        }
+
+        private void yakıtTakipSilToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            YakitTakipSil frmsil = new YakitTakipSil();
+            frmsil.txtkimlik.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            frmsil.txtplaka.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            frmsil.txtdepohacmi.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            frmsil.txtyakittipi.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            frmsil.ShowDialog();
+            this.Hide();
+        }
     }
 }

@@ -66,6 +66,12 @@
     <Compile Include="DorseEkle.Designer.cs">
       <DependentUpon>DorseEkle.cs</DependentUpon>
     </Compile>
+    <Compile Include="DorseSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DorseSil.Designer.cs">
+      <DependentUpon>DorseSil.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +96,12 @@
     <Compile Include="PersonelEkle.Designer.cs">
       <DependentUpon>PersonelEkle.cs</DependentUpon>
     </Compile>
+    <Compile Include="PersonelSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelSil.Designer.cs">
+      <DependentUpon>PersonelSil.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SatisFatura.cs">
@@ -110,6 +122,12 @@
     <Compile Include="SoforEkle.Designer.cs">
       <DependentUpon>SoforEkle.cs</DependentUpon>
     </Compile>
+    <Compile Include="SoforSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SoforSil.Designer.cs">
+      <DependentUpon>SoforSil.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tanimlamalar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,11 +140,23 @@
     <Compile Include="UyeEkle.Designer.cs">
       <DependentUpon>UyeEkle.cs</DependentUpon>
     </Compile>
+    <Compile Include="UyeSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UyeSil.Designer.cs">
+      <DependentUpon>UyeSil.cs</DependentUpon>
+    </Compile>
     <Compile Include="YakitTakipEkle.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="YakitTakipEkle.Designer.cs">
       <DependentUpon>YakitTakipEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YakitTakipSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YakitTakipSil.Designer.cs">
+      <DependentUpon>YakitTakipSil.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="CekiciEkle.resx">
       <DependentUpon>CekiciEkle.cs</DependentUpon>
@@ -136,6 +166,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DorseEkle.resx">
       <DependentUpon>DorseEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DorseSil.resx">
+      <DependentUpon>DorseSil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -148,6 +181,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PersonelEkle.resx">
       <DependentUpon>PersonelEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelSil.resx">
+      <DependentUpon>PersonelSil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -168,14 +204,23 @@
     <EmbeddedResource Include="SoforEkle.resx">
       <DependentUpon>SoforEkle.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SoforSil.resx">
+      <DependentUpon>SoforSil.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Tanimlamalar.resx">
       <DependentUpon>Tanimlamalar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UyeEkle.resx">
       <DependentUpon>UyeEkle.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UyeSil.resx">
+      <DependentUpon>UyeSil.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="YakitTakipEkle.resx">
       <DependentUpon>YakitTakipEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YakitTakipSil.resx">
+      <DependentUpon>YakitTakipSil.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
