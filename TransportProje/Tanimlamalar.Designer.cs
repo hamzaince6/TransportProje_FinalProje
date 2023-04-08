@@ -94,22 +94,23 @@ namespace TransportProje
             // çekiciListeleToolStripMenuItem
             // 
             this.çekiciListeleToolStripMenuItem.Name = "çekiciListeleToolStripMenuItem";
-            this.çekiciListeleToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.çekiciListeleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.çekiciListeleToolStripMenuItem.Text = "Çekici Listele";
             this.çekiciListeleToolStripMenuItem.Click += new System.EventHandler(this.çekiciListeleToolStripMenuItem_Click);
             // 
             // çekiciEkleToolStripMenuItem
             // 
             this.çekiciEkleToolStripMenuItem.Name = "çekiciEkleToolStripMenuItem";
-            this.çekiciEkleToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.çekiciEkleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.çekiciEkleToolStripMenuItem.Text = "Çekici Ekle";
             this.çekiciEkleToolStripMenuItem.Click += new System.EventHandler(this.çekiciEkleToolStripMenuItem_Click);
             // 
             // çekiciSilToolStripMenuItem
             // 
             this.çekiciSilToolStripMenuItem.Name = "çekiciSilToolStripMenuItem";
-            this.çekiciSilToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.çekiciSilToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.çekiciSilToolStripMenuItem.Text = "Çekici Sil";
+            this.çekiciSilToolStripMenuItem.Click += new System.EventHandler(this.çekiciSilToolStripMenuItem_Click);
             // 
             // dorseToolStripMenuItem
             // 
@@ -244,21 +245,21 @@ namespace TransportProje
             // yakitTakipListeleToolStripMenuItem
             // 
             this.yakitTakipListeleToolStripMenuItem.Name = "yakitTakipListeleToolStripMenuItem";
-            this.yakitTakipListeleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.yakitTakipListeleToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.yakitTakipListeleToolStripMenuItem.Text = "Yakit Takip Listele";
             this.yakitTakipListeleToolStripMenuItem.Click += new System.EventHandler(this.yakitTakipListeleToolStripMenuItem_Click);
             // 
             // yakıtTakipEkleToolStripMenuItem
             // 
             this.yakıtTakipEkleToolStripMenuItem.Name = "yakıtTakipEkleToolStripMenuItem";
-            this.yakıtTakipEkleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.yakıtTakipEkleToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.yakıtTakipEkleToolStripMenuItem.Text = "Yakıt Takip Ekle";
             this.yakıtTakipEkleToolStripMenuItem.Click += new System.EventHandler(this.yakıtTakipEkleToolStripMenuItem_Click);
             // 
             // yakıtTakipSilToolStripMenuItem
             // 
             this.yakıtTakipSilToolStripMenuItem.Name = "yakıtTakipSilToolStripMenuItem";
-            this.yakıtTakipSilToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.yakıtTakipSilToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.yakıtTakipSilToolStripMenuItem.Text = "Yakıt Takip Sil";
             // 
             // kullanıcıDeğiştirToolStripMenuItem

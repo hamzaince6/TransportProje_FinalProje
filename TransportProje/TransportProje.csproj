@@ -54,6 +54,12 @@
     <Compile Include="CekiciEkle.Designer.cs">
       <DependentUpon>CekiciEkle.cs</DependentUpon>
     </Compile>
+    <Compile Include="CekiciSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CekiciSil.Designer.cs">
+      <DependentUpon>CekiciSil.cs</DependentUpon>
+    </Compile>
     <Compile Include="DorseEkle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +130,9 @@
     </Compile>
     <EmbeddedResource Include="CekiciEkle.resx">
       <DependentUpon>CekiciEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CekiciSil.resx">
+      <DependentUpon>CekiciSil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DorseEkle.resx">
       <DependentUpon>DorseEkle.cs</DependentUpon>

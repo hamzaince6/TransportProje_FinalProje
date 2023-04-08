@@ -262,5 +262,17 @@ namespace TransportProje
             frmyakitekle.Show();
             this.Hide();
         }
+
+        private void çekiciSilToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CekiciSil frmsil = new CekiciSil();
+            frmsil.txtkimlik.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            frmsil.txtmarka.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            frmsil.txtmodel.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            frmsil.txtplaka.Text = dataGridView1.CurrentRow.Cells[8].Value.ToString();
+            frmsil.ShowDialog();
+            this.Hide();
+           
+        }
     }
 }
