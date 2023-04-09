@@ -20,11 +20,12 @@ namespace TransportProje
             InitializeComponent();
            
         }
-
+        // Database Tanımlama 
         OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0; Data Source=Data.accdb");
         OleDbCommand cmd = new OleDbCommand();
         OleDbDataAdapter da = new OleDbDataAdapter();
 
+        // Programdan Çıkma Butonu
         private void button1_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Programdan Çıkamak İstiyor musunuz ? ","Uyarı",MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
@@ -42,7 +43,7 @@ namespace TransportProje
 
             
         }
-
+        
         private void textBox1_Enter(object sender, EventArgs e)
         {
             if (txtkullanici.Text=="username")

@@ -18,7 +18,7 @@ namespace TransportProje
         {
             InitializeComponent();
         }
-
+        // Kaydet Butonu
         private void button1_Click(object sender, EventArgs e)
         {
             if (BoslukKontrol() == true)
@@ -26,7 +26,7 @@ namespace TransportProje
             else
                 KayitEkle();
         }
-
+        // Dorse Ekle 
         public void KayitEkle()
         {
             try
@@ -64,14 +64,14 @@ namespace TransportProje
                 MessageBox.Show(Hata.Message, "Kayıt Ekleme Hata Penceresi");
             }
         }
-
+        // Geri Dön Butonu
         private void button3_Click(object sender, EventArgs e)
         {
             Tanimlamalar frmgeri = new Tanimlamalar();
             frmgeri.Show();
             this.Hide();
         }
-
+        // Temizle Butonu 
         private void button2_Click(object sender, EventArgs e)
         {
             cmbkullanimalani.Text = "";
@@ -91,7 +91,7 @@ namespace TransportProje
         }
 
 
-
+        // Boşluk Kontrol 
         public bool BoslukKontrol()
         {
             bool bos = false; //tüm alanlar dolu
@@ -206,11 +206,7 @@ namespace TransportProje
                 radyabanci.BackColor = Color.DarkRed;
                 bos = true;
             }
-
-
-
             return bos;
-
         }
 
 

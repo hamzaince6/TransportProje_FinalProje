@@ -18,6 +18,7 @@ namespace TransportProje
             InitializeComponent();
         }
 
+        // Silme Butonu
         private void button1_Click(object sender, EventArgs e)
         {
             DialogResult cevap;
@@ -31,6 +32,8 @@ namespace TransportProje
                 MessageBox.Show("Silme İşlemi İptal Edildi", "Uyarı");
             }
         }
+
+        // Dorse Kayıt Silme
 
         public void KayitSil()
         {
@@ -52,6 +55,7 @@ namespace TransportProje
             }
         }
 
+        // Temizle Butonu
         private void button2_Click(object sender, EventArgs e)
         {
             txtkimlik.Text = "";
@@ -61,6 +65,7 @@ namespace TransportProje
             txtkimlik.Focus();
         }
 
+        // Geri Dön Butonu
         private void button3_Click(object sender, EventArgs e)
         {
             Tanimlamalar frmgeri = new Tanimlamalar();

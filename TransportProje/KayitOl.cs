@@ -17,7 +17,7 @@ namespace TransportProje
         {
             InitializeComponent();
         }
-
+        // Database Tanımlama 
         OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0; Data Source=Data.accdb");
         OleDbCommand cmd = new OleDbCommand();
         OleDbDataAdapter da = new OleDbDataAdapter();

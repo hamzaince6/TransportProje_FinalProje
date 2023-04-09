@@ -301,9 +301,11 @@ namespace TransportProje
             // txtmodel
             // 
             this.txtmodel.Location = new System.Drawing.Point(207, 94);
+            this.txtmodel.Mask = "0000";
             this.txtmodel.Name = "txtmodel";
             this.txtmodel.Size = new System.Drawing.Size(160, 20);
             this.txtmodel.TabIndex = 30;
+            this.txtmodel.ValidatingType = typeof(int);
             // 
             // cmbrenk
             // 
@@ -331,16 +333,20 @@ namespace TransportProje
             // txtsasino
             // 
             this.txtsasino.Location = new System.Drawing.Point(207, 172);
+            this.txtsasino.Mask = "0000000000";
             this.txtsasino.Name = "txtsasino";
             this.txtsasino.Size = new System.Drawing.Size(160, 20);
             this.txtsasino.TabIndex = 32;
+            this.txtsasino.ValidatingType = typeof(int);
             // 
             // txtruhsatno
             // 
             this.txtruhsatno.Location = new System.Drawing.Point(207, 209);
+            this.txtruhsatno.Mask = "0000000000";
             this.txtruhsatno.Name = "txtruhsatno";
             this.txtruhsatno.Size = new System.Drawing.Size(160, 20);
             this.txtruhsatno.TabIndex = 33;
+            this.txtruhsatno.ValidatingType = typeof(int);
             // 
             // cmbruhsatverilenyer
             // 
@@ -436,6 +442,7 @@ namespace TransportProje
             // txtagirlik
             // 
             this.txtagirlik.Location = new System.Drawing.Point(207, 286);
+            this.txtagirlik.Mask = "000000";
             this.txtagirlik.Name = "txtagirlik";
             this.txtagirlik.Size = new System.Drawing.Size(160, 20);
             this.txtagirlik.TabIndex = 35;
@@ -494,9 +501,11 @@ namespace TransportProje
             // txthgsno
             // 
             this.txthgsno.Location = new System.Drawing.Point(207, 394);
+            this.txthgsno.Mask = "0000000000";
             this.txthgsno.Name = "txthgsno";
             this.txthgsno.Size = new System.Drawing.Size(160, 20);
             this.txthgsno.TabIndex = 39;
+            this.txthgsno.ValidatingType = typeof(int);
             // 
             // cmben
             // 

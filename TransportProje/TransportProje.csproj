@@ -90,6 +90,18 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="MusteriKarti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MusteriKarti.Designer.cs">
+      <DependentUpon>MusteriKarti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pazarlama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pazarlama.Designer.cs">
+      <DependentUpon>Pazarlama.cs</DependentUpon>
+    </Compile>
     <Compile Include="PersonelEkle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,6 +190,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MusteriKarti.resx">
+      <DependentUpon>MusteriKarti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pazarlama.resx">
+      <DependentUpon>Pazarlama.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PersonelEkle.resx">
       <DependentUpon>PersonelEkle.cs</DependentUpon>

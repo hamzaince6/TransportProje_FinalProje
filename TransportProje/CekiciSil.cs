@@ -17,7 +17,7 @@ namespace TransportProje
         {
             InitializeComponent();
         }
-
+        // Çekici Silme
         public void KayitSil()
         {
             try
@@ -37,11 +37,11 @@ namespace TransportProje
 
             }
         }
-
+        // Silme Butonu
         private void button1_Click(object sender, EventArgs e)
         {
             DialogResult cevap;
-            cevap = MessageBox.Show(txtkimlik.Text + "Nolu Kayıt Silinecek\nOnaylıyor musunuz?", "UYARI", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            cevap = MessageBox.Show(txtkimlik.Text + "Nolu Kayıt Silinecek\nOnaylıyor musunuz?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
             if (cevap == DialogResult.Yes)
 
 
@@ -51,7 +51,7 @@ namespace TransportProje
                 MessageBox.Show("Silme İşlemi İptal Edildi", "Uyarı");
             }
         }
-
+        // Temizle Butonu
         private void button2_Click(object sender, EventArgs e)
         {
             txtkimlik.Text = "";
@@ -60,7 +60,7 @@ namespace TransportProje
             txtplaka.Text = "";
             txtkimlik.Focus();
         }
-
+        // Geri Dön Butonu
         private void button3_Click(object sender, EventArgs e)
         {
             Tanimlamalar frmgeri = new Tanimlamalar();
