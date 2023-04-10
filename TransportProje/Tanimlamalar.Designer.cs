@@ -35,36 +35,36 @@ namespace TransportProje
             this.çekiciListeleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.çekiciEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.çekiciSilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.çekiciGüncelleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dorseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dorseListeleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dorseEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dorseSilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dorseGüncelleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.soförToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.soförListeleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.soförEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.soförSilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.soförGüncelleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.personelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.personelListeleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.personelEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.personelSilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.personelGüncelleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.girişYapanlarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.girişListeleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.girişEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.üyeSilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.üyeGüncelleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.yakıtTakipToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.yakitTakipListeleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.yakıtTakipEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.yakıtTakipSilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.yakıtTakipGüncelleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kullanıcıDeğiştirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.anaEkranToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.uygulamadanÇıkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.çekiciGüncelleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dorseGüncelleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.soförGüncelleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.personelGüncelleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.üyeGüncelleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.yakıtTakipGüncelleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -101,23 +101,29 @@ namespace TransportProje
             // çekiciListeleToolStripMenuItem
             // 
             this.çekiciListeleToolStripMenuItem.Name = "çekiciListeleToolStripMenuItem";
-            this.çekiciListeleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.çekiciListeleToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.çekiciListeleToolStripMenuItem.Text = "Çekici Listele";
             this.çekiciListeleToolStripMenuItem.Click += new System.EventHandler(this.çekiciListeleToolStripMenuItem_Click);
             // 
             // çekiciEkleToolStripMenuItem
             // 
             this.çekiciEkleToolStripMenuItem.Name = "çekiciEkleToolStripMenuItem";
-            this.çekiciEkleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.çekiciEkleToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.çekiciEkleToolStripMenuItem.Text = "Çekici Ekle";
             this.çekiciEkleToolStripMenuItem.Click += new System.EventHandler(this.çekiciEkleToolStripMenuItem_Click);
             // 
             // çekiciSilToolStripMenuItem
             // 
             this.çekiciSilToolStripMenuItem.Name = "çekiciSilToolStripMenuItem";
-            this.çekiciSilToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.çekiciSilToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.çekiciSilToolStripMenuItem.Text = "Çekici Sil";
             this.çekiciSilToolStripMenuItem.Click += new System.EventHandler(this.çekiciSilToolStripMenuItem_Click);
+            // 
+            // çekiciGüncelleToolStripMenuItem
+            // 
+            this.çekiciGüncelleToolStripMenuItem.Name = "çekiciGüncelleToolStripMenuItem";
+            this.çekiciGüncelleToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.çekiciGüncelleToolStripMenuItem.Text = "Çekici Güncelle";
             // 
             // dorseToolStripMenuItem
             // 
@@ -151,6 +157,12 @@ namespace TransportProje
             this.dorseSilToolStripMenuItem.Text = "Dorse Sil";
             this.dorseSilToolStripMenuItem.Click += new System.EventHandler(this.dorseSilToolStripMenuItem_Click);
             // 
+            // dorseGüncelleToolStripMenuItem
+            // 
+            this.dorseGüncelleToolStripMenuItem.Name = "dorseGüncelleToolStripMenuItem";
+            this.dorseGüncelleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.dorseGüncelleToolStripMenuItem.Text = "Dorse Güncelle";
+            // 
             // soförToolStripMenuItem
             // 
             this.soförToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -165,23 +177,29 @@ namespace TransportProje
             // soförListeleToolStripMenuItem
             // 
             this.soförListeleToolStripMenuItem.Name = "soförListeleToolStripMenuItem";
-            this.soförListeleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.soförListeleToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.soförListeleToolStripMenuItem.Text = "Soför Listele";
             this.soförListeleToolStripMenuItem.Click += new System.EventHandler(this.soförListeleToolStripMenuItem_Click);
             // 
             // soförEkleToolStripMenuItem
             // 
             this.soförEkleToolStripMenuItem.Name = "soförEkleToolStripMenuItem";
-            this.soförEkleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.soförEkleToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.soförEkleToolStripMenuItem.Text = "Soför Ekle";
             this.soförEkleToolStripMenuItem.Click += new System.EventHandler(this.soförEkleToolStripMenuItem_Click);
             // 
             // soförSilToolStripMenuItem
             // 
             this.soförSilToolStripMenuItem.Name = "soförSilToolStripMenuItem";
-            this.soförSilToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.soförSilToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.soförSilToolStripMenuItem.Text = "Soför Sil";
             this.soförSilToolStripMenuItem.Click += new System.EventHandler(this.soförSilToolStripMenuItem_Click);
+            // 
+            // soförGüncelleToolStripMenuItem
+            // 
+            this.soförGüncelleToolStripMenuItem.Name = "soförGüncelleToolStripMenuItem";
+            this.soförGüncelleToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.soförGüncelleToolStripMenuItem.Text = "Soför Güncelle";
             // 
             // personelToolStripMenuItem
             // 
@@ -197,23 +215,29 @@ namespace TransportProje
             // personelListeleToolStripMenuItem
             // 
             this.personelListeleToolStripMenuItem.Name = "personelListeleToolStripMenuItem";
-            this.personelListeleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.personelListeleToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.personelListeleToolStripMenuItem.Text = "Personel Listele";
             this.personelListeleToolStripMenuItem.Click += new System.EventHandler(this.personelListeleToolStripMenuItem_Click);
             // 
             // personelEkleToolStripMenuItem
             // 
             this.personelEkleToolStripMenuItem.Name = "personelEkleToolStripMenuItem";
-            this.personelEkleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.personelEkleToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.personelEkleToolStripMenuItem.Text = "Personel Ekle";
             this.personelEkleToolStripMenuItem.Click += new System.EventHandler(this.personelEkleToolStripMenuItem_Click);
             // 
             // personelSilToolStripMenuItem
             // 
             this.personelSilToolStripMenuItem.Name = "personelSilToolStripMenuItem";
-            this.personelSilToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.personelSilToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.personelSilToolStripMenuItem.Text = "Personel Sil";
             this.personelSilToolStripMenuItem.Click += new System.EventHandler(this.personelSilToolStripMenuItem_Click);
+            // 
+            // personelGüncelleToolStripMenuItem
+            // 
+            this.personelGüncelleToolStripMenuItem.Name = "personelGüncelleToolStripMenuItem";
+            this.personelGüncelleToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.personelGüncelleToolStripMenuItem.Text = "Personel Güncelle";
             // 
             // girişYapanlarToolStripMenuItem
             // 
@@ -229,23 +253,29 @@ namespace TransportProje
             // girişListeleToolStripMenuItem
             // 
             this.girişListeleToolStripMenuItem.Name = "girişListeleToolStripMenuItem";
-            this.girişListeleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.girişListeleToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.girişListeleToolStripMenuItem.Text = "Üye Listele";
             this.girişListeleToolStripMenuItem.Click += new System.EventHandler(this.girişListeleToolStripMenuItem_Click);
             // 
             // girişEkleToolStripMenuItem
             // 
             this.girişEkleToolStripMenuItem.Name = "girişEkleToolStripMenuItem";
-            this.girişEkleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.girişEkleToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.girişEkleToolStripMenuItem.Text = "Üye Ekle";
             this.girişEkleToolStripMenuItem.Click += new System.EventHandler(this.girişEkleToolStripMenuItem_Click);
             // 
             // üyeSilToolStripMenuItem
             // 
             this.üyeSilToolStripMenuItem.Name = "üyeSilToolStripMenuItem";
-            this.üyeSilToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.üyeSilToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.üyeSilToolStripMenuItem.Text = "Üye Sil";
             this.üyeSilToolStripMenuItem.Click += new System.EventHandler(this.üyeSilToolStripMenuItem_Click);
+            // 
+            // üyeGüncelleToolStripMenuItem
+            // 
+            this.üyeGüncelleToolStripMenuItem.Name = "üyeGüncelleToolStripMenuItem";
+            this.üyeGüncelleToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.üyeGüncelleToolStripMenuItem.Text = "Üye Güncelle";
             // 
             // yakıtTakipToolStripMenuItem
             // 
@@ -261,23 +291,29 @@ namespace TransportProje
             // yakitTakipListeleToolStripMenuItem
             // 
             this.yakitTakipListeleToolStripMenuItem.Name = "yakitTakipListeleToolStripMenuItem";
-            this.yakitTakipListeleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.yakitTakipListeleToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.yakitTakipListeleToolStripMenuItem.Text = "Yakit Takip Listele";
             this.yakitTakipListeleToolStripMenuItem.Click += new System.EventHandler(this.yakitTakipListeleToolStripMenuItem_Click);
             // 
             // yakıtTakipEkleToolStripMenuItem
             // 
             this.yakıtTakipEkleToolStripMenuItem.Name = "yakıtTakipEkleToolStripMenuItem";
-            this.yakıtTakipEkleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.yakıtTakipEkleToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.yakıtTakipEkleToolStripMenuItem.Text = "Yakıt Takip Ekle";
             this.yakıtTakipEkleToolStripMenuItem.Click += new System.EventHandler(this.yakıtTakipEkleToolStripMenuItem_Click);
             // 
             // yakıtTakipSilToolStripMenuItem
             // 
             this.yakıtTakipSilToolStripMenuItem.Name = "yakıtTakipSilToolStripMenuItem";
-            this.yakıtTakipSilToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.yakıtTakipSilToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.yakıtTakipSilToolStripMenuItem.Text = "Yakıt Takip Sil";
             this.yakıtTakipSilToolStripMenuItem.Click += new System.EventHandler(this.yakıtTakipSilToolStripMenuItem_Click);
+            // 
+            // yakıtTakipGüncelleToolStripMenuItem
+            // 
+            this.yakıtTakipGüncelleToolStripMenuItem.Name = "yakıtTakipGüncelleToolStripMenuItem";
+            this.yakıtTakipGüncelleToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.yakıtTakipGüncelleToolStripMenuItem.Text = "Yakıt Takip Güncelle";
             // 
             // kullanıcıDeğiştirToolStripMenuItem
             // 
@@ -313,42 +349,6 @@ namespace TransportProje
             this.dataGridView1.Size = new System.Drawing.Size(1350, 584);
             this.dataGridView1.TabIndex = 1;
             // 
-            // çekiciGüncelleToolStripMenuItem
-            // 
-            this.çekiciGüncelleToolStripMenuItem.Name = "çekiciGüncelleToolStripMenuItem";
-            this.çekiciGüncelleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.çekiciGüncelleToolStripMenuItem.Text = "Çekici Güncelle";
-            // 
-            // dorseGüncelleToolStripMenuItem
-            // 
-            this.dorseGüncelleToolStripMenuItem.Name = "dorseGüncelleToolStripMenuItem";
-            this.dorseGüncelleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.dorseGüncelleToolStripMenuItem.Text = "Dorse Güncelle";
-            // 
-            // soförGüncelleToolStripMenuItem
-            // 
-            this.soförGüncelleToolStripMenuItem.Name = "soförGüncelleToolStripMenuItem";
-            this.soförGüncelleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.soförGüncelleToolStripMenuItem.Text = "Soför Güncelle";
-            // 
-            // personelGüncelleToolStripMenuItem
-            // 
-            this.personelGüncelleToolStripMenuItem.Name = "personelGüncelleToolStripMenuItem";
-            this.personelGüncelleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.personelGüncelleToolStripMenuItem.Text = "Personel Güncelle";
-            // 
-            // üyeGüncelleToolStripMenuItem
-            // 
-            this.üyeGüncelleToolStripMenuItem.Name = "üyeGüncelleToolStripMenuItem";
-            this.üyeGüncelleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.üyeGüncelleToolStripMenuItem.Text = "Üye Güncelle";
-            // 
-            // yakıtTakipGüncelleToolStripMenuItem
-            // 
-            this.yakıtTakipGüncelleToolStripMenuItem.Name = "yakıtTakipGüncelleToolStripMenuItem";
-            this.yakıtTakipGüncelleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.yakıtTakipGüncelleToolStripMenuItem.Text = "Yakıt Takip Güncelle";
-            // 
             // Tanimlamalar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -376,12 +376,10 @@ namespace TransportProje
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem çekiciToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem dorseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem soförToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem personelToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem çekiciListeleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem çekiciEkleToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem dorseListeleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dorseEkleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem soförListeleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem soförEkleToolStripMenuItem;
@@ -409,5 +407,7 @@ namespace TransportProje
         private System.Windows.Forms.ToolStripMenuItem personelGüncelleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem üyeGüncelleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem yakıtTakipGüncelleToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem dorseToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem dorseListeleToolStripMenuItem;
     }
 }
