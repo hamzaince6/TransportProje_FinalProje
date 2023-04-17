@@ -37,7 +37,7 @@ namespace TransportProje
             try
             {
                 Tanimlamalar.BaglantiAc();
-                string Sorgu = "Update Trailer Set Marka=@Marka,Model=@Model,Renk=@Renk,UretimYili=@UretimYili,Vites=@Vites,KM=@KM,Yakit=@Yakit,Plaka=@Plaka,AracinPiyasaDegeri=@AracinPiyasaDegeri,MotorluT_Vergisi=@MotorluT_Vergisi,HGSNo=@HGSNo,SasiNo=@SasiNo,MotorNo=@MotorNo,DepoHacmi=@DepoHacmi,RuhsatNo=@RuhsatNo,RusatVerilenYer=@RusatVerilenYer,NetAgirlik=@NetAgirlik,MotorGucu=@MotorGucu,Bayrak=@Bayrak,YerliYabancı=@YerliYabancı where Kimlik=@Kimlik";
+                string Sorgu = "Update Trailer Set KullimAlani=@KullimAlani,ModelYili=@ModelYili,Renk=@Renk,SasiNo=@SasiNo,RuhsatNo=@RuhsatNo,RuhsatVerilenYer=@RuhsatVerilenYer,Netagirlik=@Netagirlik,Bayrak=@Bayrak,YerliYabanci=@YerliYabanci,HGSNo=@HGSNo,Boy=@Boy,En=@En,Yükseklik=@Yükseklik,BosAgirlik=@BosAgirlik where Kimlik=@Kimlik";
                 OleDbCommand DegistirKomut = new OleDbCommand(Sorgu, Tanimlamalar.Baglanti);
                 DegistirKomut.Parameters.AddWithValue("@KullimAlani", cmbkullanimalani.Text);
                 DegistirKomut.Parameters.AddWithValue("@ModelYili", txtmodel.Text);
@@ -58,9 +58,8 @@ namespace TransportProje
                 DegistirKomut.Parameters.AddWithValue("@BosAgirlik", cmbbosagirlik.Text);
                 DegistirKomut.Parameters.AddWithValue("@Kimlik", txtid.Text);
 
-
                 if (DegistirKomut.ExecuteNonQuery() == 1)
-                    MessageBox.Show(cmbmarka.Text + "" + txtmodel.Text + "isimli kayıt Değiştirildi");
+                    MessageBox.Show(cmbkullanimalani.Text + "" + txtmodel.Text + "isimli kayıt Değiştirildi");
                 Tanimlamalar.Baglanti.Close();
 
             }
@@ -71,7 +70,131 @@ namespace TransportProje
             }
         }
 
+        public bool BoslukKontrol()
+        {
+            bool bos = false; //tüm alanlar dolu
+            cmbkullanimalani.BackColor = Color.White;
+            txtmodel.BackColor = Color.White;
+            cmbrenk.BackColor = Color.White;
+            txtsasino.BackColor = Color.White;
+            txtruhsatno.BackColor = Color.White;
+            cmbruhsatverilenyer.BackColor = Color.White;
+            txthgsno.BackColor = Color.White;
+            txtagirlik.BackColor = Color.White;
+            cmbbayrak.BackColor = Color.White;
+            cmben.BackColor = Color.White;
+            cmbboy.BackColor = Color.White;
+            cmbyukseklik.BackColor = Color.White;
+            cmbbosagirlik.BackColor = Color.White;
 
+            if (cmbkullanimalani.Text == "Kullanım Alanı Seçiniz" || cmbkullanimalani.Text == "")
+            {
+                cmbkullanimalani.BackColor = Color.DarkRed;
+                cmbkullanimalani.Focus();
+                bos = true;
+
+            }
+
+            if (cmbbayrak.Text == "Bayrak Seçiniz" || cmbbayrak.Text == "")
+            {
+                cmbbayrak.BackColor = Color.DarkRed;
+                cmbbayrak.Focus();
+                bos = true;
+
+            }
+
+            if (cmbrenk.Text == "Renk Seçiniz" || cmbrenk.Text == "")
+            {
+                cmbrenk.BackColor = Color.DarkRed;
+                cmbrenk.Focus();
+                bos = true;
+            }
+
+            if (cmbruhsatverilenyer.Text == "Ruhsat Verilen Yer Seçiniz" || cmbruhsatverilenyer.Text == "")
+            {
+                cmbruhsatverilenyer.BackColor = Color.DarkRed;
+                cmbruhsatverilenyer.Focus();
+                bos = true;
+            }
+
+            if (cmben.Text == "En Seçiniz" || cmben.Text == "")
+            {
+                cmben.BackColor = Color.DarkRed;
+                cmben.Focus();
+                bos = true;
+            }
+
+            if (cmbboy.Text == "Boy Seçiniz" || cmbboy.Text == "")
+            {
+                cmbboy.BackColor = Color.DarkRed;
+                cmbboy.Focus();
+                bos = true;
+            }
+
+            if (cmbyukseklik.Text == "Yükseklik Seçiniz" || cmbyukseklik.Text == "")
+            {
+                cmbyukseklik.BackColor = Color.DarkRed;
+                cmbyukseklik.Focus();
+                bos = true;
+            }
+
+            if (cmbbosagirlik.Text == "Boş Ağırlık Seçiniz" || cmbbosagirlik.Text == "")
+            {
+                cmbbosagirlik.BackColor = Color.DarkRed;
+                cmbbosagirlik.Focus();
+                bos = true;
+            }
+
+            if (txtmodel.Text == "")
+            {
+                txtmodel.BackColor = Color.DarkRed;
+                txtmodel.Focus();
+                bos = true;
+
+            }
+
+            if (txthgsno.Text == "")
+            {
+                txthgsno.BackColor = Color.DarkRed;
+                txthgsno.Focus();
+                bos = true;
+
+            }
+
+            if (txtsasino.Text == "")
+            {
+                txtsasino.BackColor = Color.DarkRed;
+                txtsasino.Focus();
+                bos = true;
+
+            }
+
+            if (txtid.Text == "")
+            {
+                txtid.BackColor = Color.DarkRed;
+                txtid.Focus();
+                bos = true;
+
+            }
+
+
+            if (txtruhsatno.Text == "")
+            {
+                txtruhsatno.BackColor = Color.DarkRed;
+                txtruhsatno.Focus();
+                bos = true;
+
+            }
+
+
+            if (radyerli.Checked == false && radyabanci.Checked == false)
+            {
+                radyerli.BackColor = Color.DarkRed;
+                radyabanci.BackColor = Color.DarkRed;
+                bos = true;
+            }
+            return bos;
+        }
 
 
 

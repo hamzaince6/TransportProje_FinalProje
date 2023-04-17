@@ -366,7 +366,28 @@ namespace TransportProje
 
         private void dorseGüncelleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            DorseGuncelle frmdegistir = new DorseGuncelle();
+            frmdegistir.txtid.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            frmdegistir.cmbkullanimalani.Text= dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            frmdegistir.txtmodel.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            frmdegistir.cmbrenk.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            frmdegistir.txtsasino.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+            frmdegistir.txtruhsatno.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+            frmdegistir.cmbruhsatverilenyer.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+            frmdegistir.txtagirlik.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
+            frmdegistir.cmbbayrak.Text = dataGridView1.CurrentRow.Cells[8].Value.ToString();
+            if (dataGridView1.CurrentRow.Cells[9].Value.ToString() == "Yerli")
+                frmdegistir.radyerli.Checked = true;
+            else if (dataGridView1.CurrentRow.Cells[9].Value.ToString() == "Yabancı")
+                frmdegistir.radyabanci.Checked = true;
+            frmdegistir.txthgsno.Text = dataGridView1.CurrentRow.Cells[10].Value.ToString();
+            frmdegistir.cmbboy.Text = dataGridView1.CurrentRow.Cells[11].Value.ToString();
+            frmdegistir.cmben.Text = dataGridView1.CurrentRow.Cells[12].Value.ToString();
+            frmdegistir.cmbyukseklik.Text = dataGridView1.CurrentRow.Cells[13].Value.ToString();
+            frmdegistir.cmbbosagirlik.Text = dataGridView1.CurrentRow.Cells[14].Value.ToString();
+   
+            frmdegistir.Show();
+            this.Hide();
         }
     }
 }
