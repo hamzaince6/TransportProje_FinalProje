@@ -179,29 +179,30 @@ namespace TransportProje
             // soförListeleToolStripMenuItem
             // 
             this.soförListeleToolStripMenuItem.Name = "soförListeleToolStripMenuItem";
-            this.soförListeleToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.soförListeleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.soförListeleToolStripMenuItem.Text = "Soför Listele";
             this.soförListeleToolStripMenuItem.Click += new System.EventHandler(this.soförListeleToolStripMenuItem_Click);
             // 
             // soförEkleToolStripMenuItem
             // 
             this.soförEkleToolStripMenuItem.Name = "soförEkleToolStripMenuItem";
-            this.soförEkleToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.soförEkleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.soförEkleToolStripMenuItem.Text = "Soför Ekle";
             this.soförEkleToolStripMenuItem.Click += new System.EventHandler(this.soförEkleToolStripMenuItem_Click);
             // 
             // soförSilToolStripMenuItem
             // 
             this.soförSilToolStripMenuItem.Name = "soförSilToolStripMenuItem";
-            this.soförSilToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.soförSilToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.soförSilToolStripMenuItem.Text = "Soför Sil";
             this.soförSilToolStripMenuItem.Click += new System.EventHandler(this.soförSilToolStripMenuItem_Click);
             // 
             // soförGüncelleToolStripMenuItem
             // 
             this.soförGüncelleToolStripMenuItem.Name = "soförGüncelleToolStripMenuItem";
-            this.soförGüncelleToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.soförGüncelleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.soförGüncelleToolStripMenuItem.Text = "Soför Güncelle";
+            this.soförGüncelleToolStripMenuItem.Click += new System.EventHandler(this.soförGüncelleToolStripMenuItem_Click);
             // 
             // personelToolStripMenuItem
             // 

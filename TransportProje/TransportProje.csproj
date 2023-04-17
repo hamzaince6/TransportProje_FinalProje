@@ -146,6 +146,12 @@
     <Compile Include="SoforEkle.Designer.cs">
       <DependentUpon>SoforEkle.cs</DependentUpon>
     </Compile>
+    <Compile Include="SoforGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SoforGuncelle.Designer.cs">
+      <DependentUpon>SoforGuncelle.cs</DependentUpon>
+    </Compile>
     <Compile Include="SoforSil.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -239,6 +245,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SoforEkle.resx">
       <DependentUpon>SoforEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SoforGuncelle.resx">
+      <DependentUpon>SoforGuncelle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SoforSil.resx">
       <DependentUpon>SoforSil.cs</DependentUpon>
