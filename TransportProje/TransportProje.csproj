@@ -54,6 +54,12 @@
     <Compile Include="CekiciEkle.Designer.cs">
       <DependentUpon>CekiciEkle.cs</DependentUpon>
     </Compile>
+    <Compile Include="CekiciGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CekiciGuncelle.Designer.cs">
+      <DependentUpon>CekiciGuncelle.cs</DependentUpon>
+    </Compile>
     <Compile Include="CekiciSil.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +71,12 @@
     </Compile>
     <Compile Include="DorseEkle.Designer.cs">
       <DependentUpon>DorseEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DorseGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DorseGuncelle.Designer.cs">
+      <DependentUpon>DorseGuncelle.cs</DependentUpon>
     </Compile>
     <Compile Include="DorseSil.cs">
       <SubType>Form</SubType>
@@ -173,11 +185,17 @@
     <EmbeddedResource Include="CekiciEkle.resx">
       <DependentUpon>CekiciEkle.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CekiciGuncelle.resx">
+      <DependentUpon>CekiciGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CekiciSil.resx">
       <DependentUpon>CekiciSil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DorseEkle.resx">
       <DependentUpon>DorseEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DorseGuncelle.resx">
+      <DependentUpon>DorseGuncelle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DorseSil.resx">
       <DependentUpon>DorseSil.cs</DependentUpon>

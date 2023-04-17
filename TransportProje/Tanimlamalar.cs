@@ -331,5 +331,42 @@ namespace TransportProje
             frmsil.ShowDialog();
             this.Hide();
         }
+
+        private void çekiciGüncelleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CekiciGuncelle frmdegistir = new CekiciGuncelle();
+            frmdegistir.txtid.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            frmdegistir.cmbmarka.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            frmdegistir.txtmodel.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            frmdegistir.cmbrenk.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            frmdegistir.txturetimyili.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+            frmdegistir.cmbvites.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+            frmdegistir.txtkm.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+            frmdegistir.cmbyakit.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
+            frmdegistir.txtplaka.Text = dataGridView1.CurrentRow.Cells[8].Value.ToString();
+            frmdegistir.txtaracdegeri.Text = dataGridView1.CurrentRow.Cells[9].Value.ToString();
+            frmdegistir.txtmtvverisi.Text = dataGridView1.CurrentRow.Cells[10].Value.ToString();
+            frmdegistir.txthgsno.Text = dataGridView1.CurrentRow.Cells[11].Value.ToString();
+            frmdegistir.txtsasino.Text = dataGridView1.CurrentRow.Cells[12].Value.ToString();
+            frmdegistir.txtmotorno.Text = dataGridView1.CurrentRow.Cells[13].Value.ToString();
+            frmdegistir.cmbdepohacmi.Text = dataGridView1.CurrentRow.Cells[14].Value.ToString();
+            frmdegistir.txtruhsatno.Text = dataGridView1.CurrentRow.Cells[15].Value.ToString();
+            frmdegistir.cmbruhsatverilenyer.Text = dataGridView1.CurrentRow.Cells[16].Value.ToString();
+            frmdegistir.txtnetagirlik.Text = dataGridView1.CurrentRow.Cells[17].Value.ToString();
+            frmdegistir.cmbmotorgucu.Text = dataGridView1.CurrentRow.Cells[18].Value.ToString();
+            frmdegistir.cmbplaka.Text = dataGridView1.CurrentRow.Cells[19].Value.ToString();
+            if (dataGridView1.CurrentRow.Cells[20].Value.ToString() == "Yerli")
+                frmdegistir.radyerli.Checked = true;
+            else if (dataGridView1.CurrentRow.Cells[20].Value.ToString() == "Yabancı")
+                frmdegistir.radyabanci.Checked = true;
+            frmdegistir.Show();
+            this.Hide();
+            
+        }
+
+        private void dorseGüncelleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

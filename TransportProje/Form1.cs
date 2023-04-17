@@ -63,22 +63,15 @@ namespace TransportProje
 
         private void textBox2_Enter(object sender, EventArgs e)
         {
-            if (txtsifre.Text=="password")
-            {
-                txtsifre.Text = "";
-                txtsifre.PasswordChar = '*';
-            }
+           
+          
         }
 
 
         char? none = null;
         private void textBox2_Leave(object sender, EventArgs e)
         {
-            if (txtsifre.Text=="")
-            {
-                txtsifre.Text = "password";
-                txtsifre.PasswordChar = Convert.ToChar(none);
-            }
+            
         }
 
    
@@ -87,7 +80,7 @@ namespace TransportProje
         {
             con.Close();
             con.Open();
-            string login = "SELECT * FROM Giris WHERE Kullaniciadi='" + txtkullanici.Text + "'and Sifre='"+txtsifre.Text+"'";
+            string login = "SELECT * FROM Giris WHERE Kullaniciadi='" + txtkullanici.Text + "'and Sifre='"+txtsifre2.Text+"'";
             cmd = new OleDbCommand(login,con);
             OleDbDataReader dr = cmd.ExecuteReader();
 
@@ -101,7 +94,7 @@ namespace TransportProje
             {
                 MessageBox.Show("Kullanıcı Adı Şifre Hatalı Tekrar Deneyin","Giriş Hatası",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 txtkullanici.Text = "";
-                txtsifre.Text = "";
+                txtsifre2.Text = "";
                 txtkullanici.Focus();
 
             }
@@ -132,10 +125,10 @@ namespace TransportProje
 
         private void txtsifre_TextChanged(object sender, EventArgs e)
         {
-            if (txtsifre.Text == "password")
+            if (txtsifre2.Text == "password")
             {
-                txtsifre.Text = "";
-                txtsifre.PasswordChar = '*';
+                txtsifre2.Text = "";
+                txtsifre2.PasswordChar = '*';
             }
         }
 

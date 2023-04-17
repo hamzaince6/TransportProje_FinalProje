@@ -32,7 +32,7 @@ namespace TransportProje
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.button1 = new System.Windows.Forms.Button();
             this.txtkullanici = new System.Windows.Forms.TextBox();
-            this.txtsifre = new System.Windows.Forms.TextBox();
+            this.txtsifre2 = new System.Windows.Forms.TextBox();
             this.btngiris = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
@@ -66,19 +66,19 @@ namespace TransportProje
             this.txtkullanici.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtkullanici_KeyPress);
             this.txtkullanici.Leave += new System.EventHandler(this.textBox1_Leave);
             // 
-            // txtsifre
+            // txtsifre2
             // 
-            this.txtsifre.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtsifre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtsifre.Location = new System.Drawing.Point(415, 415);
-            this.txtsifre.Name = "txtsifre";
-            this.txtsifre.PasswordChar = '*';
-            this.txtsifre.Size = new System.Drawing.Size(179, 19);
-            this.txtsifre.TabIndex = 5;
-            this.txtsifre.TextChanged += new System.EventHandler(this.txtsifre_TextChanged);
-            this.txtsifre.Enter += new System.EventHandler(this.textBox2_Enter);
-            this.txtsifre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtsifre_KeyPress);
-            this.txtsifre.Leave += new System.EventHandler(this.textBox2_Leave);
+            this.txtsifre2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtsifre2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtsifre2.Location = new System.Drawing.Point(415, 415);
+            this.txtsifre2.Name = "txtsifre2";
+            this.txtsifre2.PasswordChar = '*';
+            this.txtsifre2.Size = new System.Drawing.Size(179, 19);
+            this.txtsifre2.TabIndex = 5;
+            this.txtsifre2.TextChanged += new System.EventHandler(this.txtsifre_TextChanged);
+            this.txtsifre2.Enter += new System.EventHandler(this.textBox2_Enter);
+            this.txtsifre2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtsifre_KeyPress);
+            this.txtsifre2.Leave += new System.EventHandler(this.textBox2_Leave);
             // 
             // btngiris
             // 
@@ -142,7 +142,7 @@ namespace TransportProje
             this.Controls.Add(this.label1);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.btngiris);
-            this.Controls.Add(this.txtsifre);
+            this.Controls.Add(this.txtsifre2);
             this.Controls.Add(this.txtkullanici);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -159,7 +159,7 @@ namespace TransportProje
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtkullanici;
-        private System.Windows.Forms.TextBox txtsifre;
+        private System.Windows.Forms.TextBox txtsifre2;
         private System.Windows.Forms.Button btngiris;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label1;

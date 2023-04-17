@@ -124,6 +124,7 @@ namespace TransportProje
             this.çekiciGüncelleToolStripMenuItem.Name = "çekiciGüncelleToolStripMenuItem";
             this.çekiciGüncelleToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.çekiciGüncelleToolStripMenuItem.Text = "Çekici Güncelle";
+            this.çekiciGüncelleToolStripMenuItem.Click += new System.EventHandler(this.çekiciGüncelleToolStripMenuItem_Click);
             // 
             // dorseToolStripMenuItem
             // 
@@ -162,6 +163,7 @@ namespace TransportProje
             this.dorseGüncelleToolStripMenuItem.Name = "dorseGüncelleToolStripMenuItem";
             this.dorseGüncelleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.dorseGüncelleToolStripMenuItem.Text = "Dorse Güncelle";
+            this.dorseGüncelleToolStripMenuItem.Click += new System.EventHandler(this.dorseGüncelleToolStripMenuItem_Click);
             // 
             // soförToolStripMenuItem
             // 
