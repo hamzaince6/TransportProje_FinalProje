@@ -46,7 +46,7 @@ namespace TransportProje
                 if (raderkek.Checked == true)
                     DegistirKomut.Parameters.AddWithValue("@Cinsiyet", "Erkek");
                 else if (radkadin.Checked == true)
-                    DegistirKomut.Parameters.AddWithValue("@Cinsiyet", "Kadin");
+                    DegistirKomut.Parameters.AddWithValue("@Cinsiyet", "Kadın");
                 DegistirKomut.Parameters.AddWithValue("@Adres", txtadres.Text);
                 DegistirKomut.Parameters.AddWithValue("@Telefon", txttelefon.Text);
                 DegistirKomut.Parameters.AddWithValue("@OgrenimDurumu", cmbogrenimdurumu.Text);

@@ -439,5 +439,29 @@ namespace TransportProje
             frmdegistir.Show();
             this.Hide();
         }
+
+        private void üyeGüncelleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UyeGuncelle frmdegistir = new UyeGuncelle();
+            frmdegistir.txtid.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            frmdegistir.txtkullanici.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            frmdegistir.txtsifre.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            frmdegistir.txtmail.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            frmdegistir.Show();
+            this.Hide();
+        }
+
+        private void yakıtTakipGüncelleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            YakitTakipGuncelle frmdegistir = new YakitTakipGuncelle();
+            frmdegistir.txtid.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            frmdegistir.txtplaka.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            frmdegistir.cmbdepohacmi.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            frmdegistir.cmbyakit.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            frmdegistir.cmbgunlukhak.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+            frmdegistir.txtortalama.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+            frmdegistir.Show();
+            this.Hide();
+        }
     }
 }

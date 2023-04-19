@@ -176,6 +176,12 @@
     <Compile Include="UyeEkle.Designer.cs">
       <DependentUpon>UyeEkle.cs</DependentUpon>
     </Compile>
+    <Compile Include="UyeGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UyeGuncelle.Designer.cs">
+      <DependentUpon>UyeGuncelle.cs</DependentUpon>
+    </Compile>
     <Compile Include="UyeSil.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +193,12 @@
     </Compile>
     <Compile Include="YakitTakipEkle.Designer.cs">
       <DependentUpon>YakitTakipEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YakitTakipGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YakitTakipGuncelle.Designer.cs">
+      <DependentUpon>YakitTakipGuncelle.cs</DependentUpon>
     </Compile>
     <Compile Include="YakitTakipSil.cs">
       <SubType>Form</SubType>
@@ -267,11 +279,17 @@
     <EmbeddedResource Include="UyeEkle.resx">
       <DependentUpon>UyeEkle.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UyeGuncelle.resx">
+      <DependentUpon>UyeGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UyeSil.resx">
       <DependentUpon>UyeSil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="YakitTakipEkle.resx">
       <DependentUpon>YakitTakipEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YakitTakipGuncelle.resx">
+      <DependentUpon>YakitTakipGuncelle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="YakitTakipSil.resx">
       <DependentUpon>YakitTakipSil.cs</DependentUpon>
