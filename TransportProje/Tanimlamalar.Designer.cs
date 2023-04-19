@@ -140,28 +140,28 @@ namespace TransportProje
             // dorseListeleToolStripMenuItem
             // 
             this.dorseListeleToolStripMenuItem.Name = "dorseListeleToolStripMenuItem";
-            this.dorseListeleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.dorseListeleToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.dorseListeleToolStripMenuItem.Text = "Dorse Listele";
             this.dorseListeleToolStripMenuItem.Click += new System.EventHandler(this.dorseListeleToolStripMenuItem_Click);
             // 
             // dorseEkleToolStripMenuItem
             // 
             this.dorseEkleToolStripMenuItem.Name = "dorseEkleToolStripMenuItem";
-            this.dorseEkleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.dorseEkleToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.dorseEkleToolStripMenuItem.Text = "Dorse Ekle";
             this.dorseEkleToolStripMenuItem.Click += new System.EventHandler(this.dorseEkleToolStripMenuItem_Click);
             // 
             // dorseSilToolStripMenuItem
             // 
             this.dorseSilToolStripMenuItem.Name = "dorseSilToolStripMenuItem";
-            this.dorseSilToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.dorseSilToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.dorseSilToolStripMenuItem.Text = "Dorse Sil";
             this.dorseSilToolStripMenuItem.Click += new System.EventHandler(this.dorseSilToolStripMenuItem_Click);
             // 
             // dorseGüncelleToolStripMenuItem
             // 
             this.dorseGüncelleToolStripMenuItem.Name = "dorseGüncelleToolStripMenuItem";
-            this.dorseGüncelleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.dorseGüncelleToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.dorseGüncelleToolStripMenuItem.Text = "Dorse Güncelle";
             this.dorseGüncelleToolStripMenuItem.Click += new System.EventHandler(this.dorseGüncelleToolStripMenuItem_Click);
             // 
@@ -179,28 +179,28 @@ namespace TransportProje
             // soförListeleToolStripMenuItem
             // 
             this.soförListeleToolStripMenuItem.Name = "soförListeleToolStripMenuItem";
-            this.soförListeleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.soförListeleToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.soförListeleToolStripMenuItem.Text = "Soför Listele";
             this.soförListeleToolStripMenuItem.Click += new System.EventHandler(this.soförListeleToolStripMenuItem_Click);
             // 
             // soförEkleToolStripMenuItem
             // 
             this.soförEkleToolStripMenuItem.Name = "soförEkleToolStripMenuItem";
-            this.soförEkleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.soförEkleToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.soförEkleToolStripMenuItem.Text = "Soför Ekle";
             this.soförEkleToolStripMenuItem.Click += new System.EventHandler(this.soförEkleToolStripMenuItem_Click);
             // 
             // soförSilToolStripMenuItem
             // 
             this.soförSilToolStripMenuItem.Name = "soförSilToolStripMenuItem";
-            this.soförSilToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.soförSilToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.soförSilToolStripMenuItem.Text = "Soför Sil";
             this.soförSilToolStripMenuItem.Click += new System.EventHandler(this.soförSilToolStripMenuItem_Click);
             // 
             // soförGüncelleToolStripMenuItem
             // 
             this.soförGüncelleToolStripMenuItem.Name = "soförGüncelleToolStripMenuItem";
-            this.soförGüncelleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.soförGüncelleToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.soförGüncelleToolStripMenuItem.Text = "Soför Güncelle";
             this.soförGüncelleToolStripMenuItem.Click += new System.EventHandler(this.soförGüncelleToolStripMenuItem_Click);
             // 
@@ -218,29 +218,30 @@ namespace TransportProje
             // personelListeleToolStripMenuItem
             // 
             this.personelListeleToolStripMenuItem.Name = "personelListeleToolStripMenuItem";
-            this.personelListeleToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.personelListeleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.personelListeleToolStripMenuItem.Text = "Personel Listele";
             this.personelListeleToolStripMenuItem.Click += new System.EventHandler(this.personelListeleToolStripMenuItem_Click);
             // 
             // personelEkleToolStripMenuItem
             // 
             this.personelEkleToolStripMenuItem.Name = "personelEkleToolStripMenuItem";
-            this.personelEkleToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.personelEkleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.personelEkleToolStripMenuItem.Text = "Personel Ekle";
             this.personelEkleToolStripMenuItem.Click += new System.EventHandler(this.personelEkleToolStripMenuItem_Click);
             // 
             // personelSilToolStripMenuItem
             // 
             this.personelSilToolStripMenuItem.Name = "personelSilToolStripMenuItem";
-            this.personelSilToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.personelSilToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.personelSilToolStripMenuItem.Text = "Personel Sil";
             this.personelSilToolStripMenuItem.Click += new System.EventHandler(this.personelSilToolStripMenuItem_Click);
             // 
             // personelGüncelleToolStripMenuItem
             // 
             this.personelGüncelleToolStripMenuItem.Name = "personelGüncelleToolStripMenuItem";
-            this.personelGüncelleToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.personelGüncelleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.personelGüncelleToolStripMenuItem.Text = "Personel Güncelle";
+            this.personelGüncelleToolStripMenuItem.Click += new System.EventHandler(this.personelGüncelleToolStripMenuItem_Click);
             // 
             // girişYapanlarToolStripMenuItem
             // 

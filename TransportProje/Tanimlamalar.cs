@@ -412,5 +412,32 @@ namespace TransportProje
             frmdegistir.Show();
             this.Hide();
         }
+
+        private void personelGüncelleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PersonelGuncelle frmdegistir = new PersonelGuncelle();
+            frmdegistir.txtid.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            frmdegistir.txtad.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            frmdegistir.txtsoyad.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            frmdegistir.txttc.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            if (dataGridView1.CurrentRow.Cells[4].Value.ToString() == "Erkek")
+                frmdegistir.raderkek.Checked = true;
+            else if (dataGridView1.CurrentRow.Cells[4].Value.ToString() == "Kadın")
+                frmdegistir.radkadin.Checked = true;
+            frmdegistir.txtadres.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+            frmdegistir.txttelefon.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+            frmdegistir.cmbogrenimdurumu.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
+            frmdegistir.cmbbirim.Text = dataGridView1.CurrentRow.Cells[8].Value.ToString();
+            frmdegistir.txtiban.Text = dataGridView1.CurrentRow.Cells[9].Value.ToString();
+            frmdegistir.txtmaas.Text = dataGridView1.CurrentRow.Cells[10].Value.ToString();
+            frmdegistir.txtprim.Text = dataGridView1.CurrentRow.Cells[11].Value.ToString();
+            frmdegistir.txtavans.Text = dataGridView1.CurrentRow.Cells[12].Value.ToString();
+            frmdegistir.txtcalisma.Text = dataGridView1.CurrentRow.Cells[13].Value.ToString();
+            frmdegistir.txtbaslama.Text = dataGridView1.CurrentRow.Cells[14].Value.ToString();
+            frmdegistir.txtayrilmatarihi.Text = dataGridView1.CurrentRow.Cells[15].Value.ToString();
+            frmdegistir.txtayrilma.Text = dataGridView1.CurrentRow.Cells[16].Value.ToString();
+            frmdegistir.Show();
+            this.Hide();
+        }
     }
 }

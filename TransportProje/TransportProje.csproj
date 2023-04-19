@@ -120,6 +120,12 @@
     <Compile Include="PersonelEkle.Designer.cs">
       <DependentUpon>PersonelEkle.cs</DependentUpon>
     </Compile>
+    <Compile Include="PersonelGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelGuncelle.Designer.cs">
+      <DependentUpon>PersonelGuncelle.cs</DependentUpon>
+    </Compile>
     <Compile Include="PersonelSil.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -223,6 +229,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PersonelEkle.resx">
       <DependentUpon>PersonelEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelGuncelle.resx">
+      <DependentUpon>PersonelGuncelle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PersonelSil.resx">
       <DependentUpon>PersonelSil.cs</DependentUpon>
