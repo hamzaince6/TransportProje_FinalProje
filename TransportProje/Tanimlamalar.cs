@@ -385,7 +385,6 @@ namespace TransportProje
             frmdegistir.cmben.Text = dataGridView1.CurrentRow.Cells[12].Value.ToString();
             frmdegistir.cmbyukseklik.Text = dataGridView1.CurrentRow.Cells[13].Value.ToString();
             frmdegistir.cmbbosagirlik.Text = dataGridView1.CurrentRow.Cells[14].Value.ToString();
-   
             frmdegistir.Show();
             this.Hide();
         }
