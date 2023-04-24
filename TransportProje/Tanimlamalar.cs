@@ -156,7 +156,7 @@ namespace TransportProje
 
         private void uygulamadanÇıkToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Programdan Çıkamak İstiyor musunuz ? ", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult dialogResult = MessageBox.Show("Programdan Çıkmak İstiyor musunuz ? ", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
             if (dialogResult == DialogResult.Yes)
             {
@@ -272,7 +272,6 @@ namespace TransportProje
             frmsil.txtplaka.Text = dataGridView1.CurrentRow.Cells[8].Value.ToString();
             frmsil.ShowDialog();
             this.Hide();
-           
         }
 
         private void dorseSilToolStripMenuItem_Click(object sender, EventArgs e)

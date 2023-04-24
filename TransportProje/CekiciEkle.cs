@@ -125,7 +125,6 @@ namespace TransportProje
             txtmotorno.BackColor = Color.White;
             cmbdepohacmi.BackColor = Color.White;
             txtruhsatno.BackColor = Color.White;
-            cmbruhsatverilenyer.BackColor = Color.White;
             txtnetagirlik.BackColor = Color.White;
             cmbmotorgucu.BackColor = Color.White;
             cmbplaka.BackColor = Color.White;
@@ -184,12 +183,7 @@ namespace TransportProje
                 bos = true;
             }
 
-            if (cmbruhsatverilenyer.Text == "Ruhsat Verilen Yer Seçiniz" || cmbruhsatverilenyer.Text == "")
-            {
-                cmbruhsatverilenyer.BackColor = Color.DarkRed;
-                cmbruhsatverilenyer.Focus();
-                bos = true;
-            }
+            
 
             if (cmbyakit.Text == "Yakıt Seçiniz" || cmbyakit.Text == "")
             {
