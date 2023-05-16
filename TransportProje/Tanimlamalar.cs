@@ -461,5 +461,556 @@ namespace TransportProje
             frmdegistir.Show();
             this.Hide();
         }
+
+        private void checkBox11_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkogrenimdurumu.Checked)
+            {
+                cmbpersonelogrenımdurumu.Enabled = true;
+                cmbpersonelogrenımdurumu.Focus();
+            }
+            else
+            {
+                cmbpersonelogrenımdurumu.Text = "";
+                cmbpersonelogrenımdurumu.Enabled = false;
+
+
+            }
+
+        }
+
+        private void chkmarka_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkmarka.Checked)
+            {
+                cmbcekicimarka.Enabled = true;
+                cmbcekicimarka.Focus();
+            }
+            else
+            {
+                cmbcekicimarka.Text = "";
+                cmbcekicimarka.Enabled = false;
+
+
+            }
+        }
+
+        private void chkmodel_CheckedChanged(object sender, EventArgs e)
+        {
+
+            if (chkmodel.Checked)
+            {
+                txtcekicimodel.Enabled = true;
+                txtcekicimodel.Focus();
+            }
+            else
+            {
+                txtcekicimodel.Text = "";
+                txtcekicimodel.Enabled = false;
+
+
+            }
+        }
+
+        private void chkplaka_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkplaka.Checked)
+            {
+                txtcekiciplaka.Enabled = true;
+                txtcekiciplaka.Focus();
+            }
+            else
+            {
+                txtcekiciplaka.Text = "";
+                txtcekiciplaka.Enabled = false;
+
+
+            }
+        }
+
+        private void chkkullanimalani_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkkullanimalani.Checked)
+            {
+                cmbdorsekullanimalani.Enabled = true;
+                cmbdorsekullanimalani.Focus();
+            }
+            else
+            {
+                cmbdorsekullanimalani.Text = "";
+                cmbdorsekullanimalani.Enabled = false;
+
+
+            }
+        }
+
+        private void chkboy_CheckedChanged(object sender, EventArgs e)
+        {
+            
+            if (chkboy.Checked)
+            {
+                cmbdorseboy.Enabled = true;
+                cmbdorseboy.Focus();
+            }
+            else
+            {
+                cmbdorseboy.Text = "";
+                cmbdorseboy.Enabled = false;
+
+
+            }
+        }
+
+        private void chkyukselik_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkyukselik.Checked)
+            {
+                cmbdorseyukselik.Enabled = true;
+                cmbdorseyukselik.Focus();
+            }
+            else
+            {
+                cmbdorseyukselik.Text = "";
+                cmbdorseyukselik.Enabled = false;
+
+
+            }
+        }
+
+        private void chksofortc_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chksofortc.Checked)
+            {
+                txtsofortc.Enabled = true;
+                txtsofortc.Focus();
+            }
+            else
+            {
+                txtsofortc.Text = "";
+                txtsofortc.Enabled = false;
+
+
+            }
+        }
+
+        private void chksoforplaka_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chksoforplaka.Checked)
+            {
+                txtsoforplaka.Enabled = true;
+                txtsoforplaka.Focus();
+            }
+            else
+            {
+                txtsoforplaka.Text = "";
+                txtsoforplaka.Enabled = false;
+
+
+            }
+        }
+
+        private void chkehliyetsinif_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkehliyetsinif.Checked)
+            {
+                cmbsoforehliyetsinif.Enabled = true;
+                cmbsoforehliyetsinif.Focus();
+            }
+            else
+            {
+                cmbsoforehliyetsinif.Text = "";
+                cmbsoforehliyetsinif.Enabled = false;
+
+
+            }
+        }
+
+        private void chkpersoneltc_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkpersoneltc.Checked)
+            {
+                txtpersoneltc.Enabled = true;
+                txtpersoneltc.Focus();
+            }
+            else
+            {
+                txtpersoneltc.Text = "";
+                txtpersoneltc.Enabled = false;
+
+
+            }
+        }
+
+        private void chkpersonelbirim_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkpersonelbirim.Checked)
+            {
+                cmbpersonelbirim.Enabled = true;
+                cmbpersonelbirim.Focus();
+            }
+            else
+            {
+                cmbpersonelbirim.Text = "";
+                cmbpersonelbirim.Enabled = false;
+
+
+            }
+        }
+
+        private void chkkullaniciadi_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkkullaniciadi.Checked)
+            {
+                txtuyekullaniciadi.Enabled = true;
+                txtuyekullaniciadi.Focus();
+            }
+            else
+            {
+                txtuyekullaniciadi.Text = "";
+                txtuyekullaniciadi.Enabled = false;
+
+
+            }
+        }
+
+        private void chkuyesifre_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkuyesifre.Checked)
+            {
+                txtuyesifre.Enabled = true;
+                txtuyesifre.Focus();
+            }
+            else
+            {
+                txtuyesifre.Text = "";
+                txtuyesifre.Enabled = false;
+
+
+            }
+
+        }
+
+        private void chkuyemail_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkuyemail.Checked)
+            {
+                txtuyemail.Enabled = true;
+                txtuyemail.Focus();
+            }
+            else
+            {
+                txtuyemail.Text = "";
+                txtuyemail.Enabled = false;
+
+
+            }
+
+        }
+
+        private void chkyakitplaka_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkyakitplaka.Checked)
+            {
+                txtyakitplaka.Enabled = true;
+                txtyakitplaka.Focus();
+            }
+            else
+            {
+                txtyakitplaka.Text = "";
+                txtyakitplaka.Enabled = false;
+
+
+            }
+        }
+
+        private void chkyakittipi_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkyakittipi.Checked)
+            {
+                cmbyakittipi.Enabled = true;
+                cmbyakittipi.Focus();
+            }
+            else
+            {
+                cmbyakittipi.Text = "";
+                cmbyakittipi.Enabled = false;
+            }
+        }
+
+        private void chkdepohacmi_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkdepohacmi.Checked)
+            {
+                cmbdepohacmi.Enabled = true;
+                cmbdepohacmi.Focus();
+            }
+            else
+            {
+                cmbdepohacmi.Text = "";
+                cmbdepohacmi.Enabled = false;
+            }
+        }
+
+        public void CekiciKayitAra()
+        {
+            try
+            {
+                BaglantiAc();
+                DataSet ds = new DataSet();
+                string SorguCekiciKayitAra = "select * from Trucks";
+                string SorguCekiciKayitAraMarka = "Select * From Trucks where Marka='" + cmbcekicimarka.Text + "'";
+                string SorguCekiciKayitAraModel = "Select * From Trucks where Model='" + txtcekicimodel.Text + "'";
+                string SorguCekiciKayitAraPlaka = "Select * From Trucks where Plaka='" + txtcekiciplaka.Text + "'";
+
+                string SorguMarkaModel = "Select * From Trucks where Marka='" + cmbcekicimarka.Text + "' And Model='" + txtcekicimodel.Text + "'";
+                string SorguMarkaPlaka = "Select * From Trucks where Marka='" + cmbcekicimarka.Text + "' And Plaka='" + txtcekiciplaka.Text + "'";
+                string SorguModelPlaka = "Select * From Trucks where Model='" + txtcekicimodel.Text + "' And Plaka='" + txtcekiciplaka.Text + "'";
+                string SorguMarkaModelPlaka = "Select * From Trucks where Marka='" + cmbcekicimarka.Text + "' And Model='" + txtcekicimodel.Text + "'  And Plaka='" + txtcekiciplaka.Text + "'";
+               
+                if (chkmarka.Checked && chkmodel.Checked && chkplaka.Checked)
+                    SorguCekiciKayitAra = SorguMarkaModelPlaka;
+                else if (chkmarka.Checked && chkmodel.Checked)
+                    SorguCekiciKayitAra = SorguMarkaModel;
+                else if (chkmarka.Checked && chkplaka.Checked)
+                    SorguCekiciKayitAra = SorguMarkaPlaka;
+                else if (chkmodel.Checked && chkplaka.Checked)
+                    SorguCekiciKayitAra = SorguModelPlaka;
+                else if (chkmarka.Checked)
+                    SorguCekiciKayitAra = SorguCekiciKayitAraMarka;
+                else if (chkmodel.Checked)
+                    SorguCekiciKayitAra = SorguCekiciKayitAraModel;
+                else if (chkplaka.Checked)
+                    SorguCekiciKayitAra = SorguCekiciKayitAraPlaka;
+
+
+
+                OleDbDataAdapter da = new OleDbDataAdapter(SorguCekiciKayitAra, Baglanti);
+                da.Fill(ds, "Trucks");
+                dataGridView1.DataSource = ds.Tables["Trucks"];
+                Baglanti.Close();
+            }
+            catch (Exception Hata)
+            {
+                //Sistem Hata Mesajını Göster
+                MessageBox.Show(Hata.Message, "Kayıt Arama Hata Penceresi");
+            }
+        }
+
+        private void btnara_Click(object sender, EventArgs e)
+        {
+            CekiciKayitAra();
+        }
+
+
+        public void CekiciVeriYukle()
+        {
+            try
+            {
+                Tanimlamalar.BaglantiAc();
+                string Sorgu = "Select Marka from Trucks";
+                OleDbCommand YukleKomut = new OleDbCommand(Sorgu, Tanimlamalar.Baglanti);
+                OleDbDataReader dr = YukleKomut.ExecuteReader();
+                while (dr.Read())
+                {
+                    cmbcekicimarka.Items.Add(dr["Marka"]);
+                }
+                Tanimlamalar.Baglanti.Close();
+            }
+            catch (Exception Hata)
+            {
+                MessageBox.Show(Hata.Message, "Veri Yükleme Hata Penceresi");
+            }
+        }
+
+        private void Tanimlamalar_Load(object sender, EventArgs e)
+        {
+            CekiciVeriYukle();
+            DorseVeriYukleKullanimAlani();
+            DorseVeriYukleBoy();
+            DorseVeriYukleYukseklik();
+            SoforVeriYukleEhliyetSınıf();
+
+        }
+
+
+
+        public void DorseKayitAra()
+        {
+            try
+            {
+                BaglantiAc();
+                DataSet ds = new DataSet();
+                string SorguDorseKayitAra = "select * from Trailer";
+                string SorguDorseKayitAraKullanımAlanı = "Select * From Trailer where KullimAlani='" + cmbdorsekullanimalani.Text + "'";
+                string SorguDorseKayitAraBoy = "Select * From Trailer where Boy='" + cmbdorseboy.Text + "'";
+                string SorguDorseKayitAraYukseklik = "Select * From Trailer where Yükseklik='" + cmbdorseyukselik.Text + "'";
+
+                string SorguKullanımAlanıBoy = "Select * From Trailer where KullimAlani='" + cmbdorsekullanimalani.Text + "' And Boy='" + cmbdorseboy.Text + "'";
+                string SorguKullanımAlanıYukseklik = "Select * From Trailer where KullimAlani='" + cmbdorsekullanimalani.Text + "' And Yükseklik='" + cmbdorseyukselik.Text + "'";
+                string SorguBoyYukseklik = "Select * From Trailer where Boy='" + cmbdorseboy.Text + "' And Yükseklik='" + cmbdorseyukselik.Text + "'";
+                string SorguKullanımAlanıBoyYukseklik = "Select * From Trailer where KullimAlani='" + cmbdorsekullanimalani.Text + "' And Boy='" + cmbdorseboy.Text + "'  And Yükseklik='" + cmbdorseyukselik.Text + "'";
+
+                if (chkkullanimalani.Checked && chkboy.Checked && chkyukselik.Checked)
+                    SorguDorseKayitAra = SorguDorseKayitAraYukseklik;
+                else if (chkkullanimalani.Checked && chkboy.Checked)
+                    SorguDorseKayitAra = SorguKullanımAlanıBoy;
+                else if (chkkullanimalani.Checked && chkyukselik.Checked)
+                    SorguDorseKayitAra = SorguBoyYukseklik;
+                else if (chkboy.Checked && chkyukselik.Checked)
+                    SorguDorseKayitAra = SorguBoyYukseklik;
+                else if (chkkullanimalani.Checked)
+                    SorguDorseKayitAra = SorguDorseKayitAraKullanımAlanı;
+                else if (chkboy.Checked)
+                    SorguDorseKayitAra = SorguDorseKayitAraBoy;
+                else if (chkyukselik.Checked)
+                    SorguDorseKayitAra = SorguDorseKayitAraYukseklik;
+
+
+
+                OleDbDataAdapter da = new OleDbDataAdapter(SorguDorseKayitAra, Baglanti);
+                da.Fill(ds, "Trailer");
+                dataGridView1.DataSource = ds.Tables["Trailer"];
+                Baglanti.Close();
+            }
+            catch (Exception Hata)
+            {
+                //Sistem Hata Mesajını Göster
+                MessageBox.Show(Hata.Message, "Kayıt Arama Hata Penceresi");
+            }
+        }
+
+        public void DorseVeriYukleKullanimAlani()
+        {
+            try
+            {
+                Tanimlamalar.BaglantiAc();
+                string Sorgu = "Select KullimAlani from Trailer";
+                OleDbCommand YukleKomut = new OleDbCommand(Sorgu, Tanimlamalar.Baglanti);
+                OleDbDataReader dr = YukleKomut.ExecuteReader();
+                while (dr.Read())
+                {
+                    cmbdorsekullanimalani.Items.Add(dr["KullimAlani"]);
+                }
+                Tanimlamalar.Baglanti.Close();
+            }
+            catch (Exception Hata)
+            {
+                MessageBox.Show(Hata.Message, "Veri Yükleme Hata Penceresi");
+            }
+        }
+
+        public void DorseVeriYukleBoy()
+        {
+            try
+            {
+                Tanimlamalar.BaglantiAc();
+                string Sorgu = "Select Boy from Trailer";
+                OleDbCommand YukleKomut = new OleDbCommand(Sorgu, Tanimlamalar.Baglanti);
+                OleDbDataReader dr = YukleKomut.ExecuteReader();
+                while (dr.Read())
+                {
+                    cmbdorseboy.Items.Add(dr["Boy"]);
+                }
+                Tanimlamalar.Baglanti.Close();
+            }
+            catch (Exception Hata)
+            {
+                MessageBox.Show(Hata.Message, "Veri Yükleme Hata Penceresi");
+            }
+        }
+
+        public void DorseVeriYukleYukseklik()
+        {
+            try
+            {
+                Tanimlamalar.BaglantiAc();
+                string Sorgu = "Select Yükseklik from Trailer";
+                OleDbCommand YukleKomut = new OleDbCommand(Sorgu, Tanimlamalar.Baglanti);
+                OleDbDataReader dr = YukleKomut.ExecuteReader();
+                while (dr.Read())
+                {
+                    cmbdorseyukselik.Items.Add(dr["Yükseklik"]);
+                }
+                Tanimlamalar.Baglanti.Close();
+            }
+            catch (Exception Hata)
+            {
+                MessageBox.Show(Hata.Message, "Veri Yükleme Hata Penceresi");
+            }
+        }
+
+        private void btnaradorse_Click(object sender, EventArgs e)
+        {
+            DorseKayitAra();
+        }
+
+        public void SoforKayitAra()
+        {
+            try
+            {
+                BaglantiAc();
+                DataSet ds = new DataSet();
+                string SorguSoforKayitAra = "select * from Sofor";
+                string SorguSoforKayitAraTcKimlik = "Select * From Sofor where TcKimlikNo='" + txtsofortc.Text + "'";
+                string SorguSoforKayitAraPlaka = "Select * From Sofor where Plaka='" + txtsoforplaka.Text + "'";
+                string SorguSoforKayitAraEhliyetSinif = "Select * From Sofor where EhliyetSinifi='" + cmbsoforehliyetsinif.Text + "'";
+
+                string SorguTCNoPlaka = "Select * From Sofor where TcKimlikNo='" + txtsofortc.Text + "' And Plaka='" + txtsoforplaka.Text + "'";
+                string SorguTCNoEhliyetSınıfı = "Select * From Sofor where TcKimlikNo='" + txtsofortc.Text + "' And EhliyetSinifi='" + cmbsoforehliyetsinif.Text + "'";
+                string SorguPlakaEhliyetSınıfı = "Select * From Sofor where Plaka='" + txtsoforplaka.Text + "' And EhliyetSinifi='" + cmbsoforehliyetsinif.Text + "'";
+                string SorguTCNoPlakaEhliyetSınıfı = "Select * From Sofor where TcKimlikNo='" + txtsofortc.Text + "' And Plaka='" + txtsoforplaka.Text + "'  And TcKimlikNo='" + txtsofortc.Text + "'";
+
+                if (chksofortc.Checked && chkplaka.Checked && chkehliyetsinif.Checked)
+                    SorguSoforKayitAra = SorguTCNoPlakaEhliyetSınıfı;
+                else if (chksofortc.Checked && chkplaka.Checked)
+                    SorguSoforKayitAra = SorguTCNoPlaka;
+                else if (chksofortc.Checked && chkehliyetsinif.Checked)
+                    SorguSoforKayitAra = SorguTCNoEhliyetSınıfı;
+                else if (chkplaka.Checked && chkehliyetsinif.Checked)
+                    SorguSoforKayitAra = SorguPlakaEhliyetSınıfı;
+                else if (chksofortc.Checked)
+                    SorguSoforKayitAra = SorguSoforKayitAraTcKimlik;
+                else if (chksoforplaka.Checked)
+                    SorguSoforKayitAra = SorguSoforKayitAraPlaka;
+                else if (chkehliyetsinif.Checked)
+                    SorguSoforKayitAra = SorguSoforKayitAraEhliyetSinif;
+
+
+                OleDbDataAdapter da = new OleDbDataAdapter(SorguSoforKayitAra, Baglanti);
+                da.Fill(ds, "Sofor");
+                dataGridView1.DataSource = ds.Tables["Sofor"];
+                Baglanti.Close();
+            }
+            catch (Exception Hata)
+            {
+                //Sistem Hata Mesajını Göster
+                MessageBox.Show(Hata.Message, "Kayıt Arama Hata Penceresi");
+            }
+        }
+
+        public void SoforVeriYukleEhliyetSınıf()
+        {
+            try
+            {
+                Tanimlamalar.BaglantiAc();
+                string Sorgu = "Select EhliyetSinifi from Sofor";
+                OleDbCommand YukleKomut = new OleDbCommand(Sorgu, Tanimlamalar.Baglanti);
+                OleDbDataReader dr = YukleKomut.ExecuteReader();
+                while (dr.Read())
+                {
+                    cmbsoforehliyetsinif.Items.Add(dr["EhliyetSinifi"]);
+                }
+                Tanimlamalar.Baglanti.Close();
+            }
+            catch (Exception Hata)
+            {
+                MessageBox.Show(Hata.Message, "Veri Yükleme Hata Penceresi");
+            }
+        }
+
+        private void btnarasofor_Click(object sender, EventArgs e)
+        {
+            SoforKayitAra();
+        }
     }
 }

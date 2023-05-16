@@ -58,7 +58,7 @@ namespace TransportProje
                 DegistirKomut.Parameters.AddWithValue("@Yükseklik", cmbyukseklik.Text);
                 DegistirKomut.Parameters.AddWithValue("@BosAgirlik", cmbbosagirlik.Text);
                 DegistirKomut.Parameters.AddWithValue("@Kimlik", txtid.Text);
-
+                
                 if (DegistirKomut.ExecuteNonQuery() == 1)
                     MessageBox.Show(cmbkullanimalani.Text + "" + txtmodel.Text + "isimli kayıt Değiştirildi");
                 Tanimlamalar.Baglanti.Close();

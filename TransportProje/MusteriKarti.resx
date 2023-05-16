@@ -120,10 +120,13 @@
   <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>91</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        /9j/4AAQSkZJRgABAQEBLAEsAAD/7gAOQWRvYmUAZAAAAAAB/+EIrkV4aWYAAE1NACoAAAAIAAcBEgAD
+        /9j/4AAQSkZJRgABAQEBKwErAAD/7gAOQWRvYmUAZAAAAAAB/+EIrkV4aWYAAE1NACoAAAAIAAcBEgAD
         AAAAAQABAAABGgAFAAAAAQAAAGIBGwAFAAAAAQAAAGoBKAADAAAAAQACAAABMQACAAAAHwAAAHIBMgAC
         AAAAFAAAAJKHaQAEAAAAAQAAAKYAAADGASv//AABAAABK//8AAEAAEFkb2JlIFBob3Rvc2hvcCAyMi4x
         IChXaW5kb3dzKQAAMjAyMzowNDowNyAwMToyNzowMwAAAqACAAQAAAABAAAFWqADAAQAAAABAAADDAAA

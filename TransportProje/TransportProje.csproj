@@ -114,6 +114,12 @@
     <Compile Include="Pazarlama.Designer.cs">
       <DependentUpon>Pazarlama.cs</DependentUpon>
     </Compile>
+    <Compile Include="PersonelBirimEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelBirimEkle.Designer.cs">
+      <DependentUpon>PersonelBirimEkle.cs</DependentUpon>
+    </Compile>
     <Compile Include="PersonelEkle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -244,6 +250,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pazarlama.resx">
       <DependentUpon>Pazarlama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelBirimEkle.resx">
+      <DependentUpon>PersonelBirimEkle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PersonelEkle.resx">
       <DependentUpon>PersonelEkle.cs</DependentUpon>
