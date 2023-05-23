@@ -154,6 +154,7 @@ namespace TransportProje
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
             this.toolStripDropDownButton1.Size = new System.Drawing.Size(89, 20);
             this.toolStripDropDownButton1.Text = "Aylik Gelir";
+            this.toolStripDropDownButton1.Click += new System.EventHandler(this.toolStripDropDownButton1_Click);
             // 
             // toolStripDropDownButton2
             // 
@@ -162,6 +163,7 @@ namespace TransportProje
             this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
             this.toolStripDropDownButton2.Size = new System.Drawing.Size(88, 20);
             this.toolStripDropDownButton2.Text = "Yillik Gelir";
+            this.toolStripDropDownButton2.Click += new System.EventHandler(this.toolStripDropDownButton2_Click);
             // 
             // toolStripDropDownButton3
             // 

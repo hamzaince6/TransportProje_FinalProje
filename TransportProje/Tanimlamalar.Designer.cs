@@ -438,9 +438,9 @@ namespace TransportProje
             // btnara
             // 
             this.btnara.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnara.Location = new System.Drawing.Point(121, 101);
+            this.btnara.Location = new System.Drawing.Point(118, 100);
             this.btnara.Name = "btnara";
-            this.btnara.Size = new System.Drawing.Size(132, 23);
+            this.btnara.Size = new System.Drawing.Size(124, 23);
             this.btnara.TabIndex = 4;
             this.btnara.Text = "Ara";
             this.btnara.UseVisualStyleBackColor = true;
@@ -451,7 +451,7 @@ namespace TransportProje
             this.txtcekiciplaka.Enabled = false;
             this.txtcekiciplaka.Location = new System.Drawing.Point(121, 74);
             this.txtcekiciplaka.Name = "txtcekiciplaka";
-            this.txtcekiciplaka.Size = new System.Drawing.Size(132, 20);
+            this.txtcekiciplaka.Size = new System.Drawing.Size(121, 20);
             this.txtcekiciplaka.TabIndex = 3;
             // 
             // txtcekicimodel
@@ -459,7 +459,7 @@ namespace TransportProje
             this.txtcekicimodel.Enabled = false;
             this.txtcekicimodel.Location = new System.Drawing.Point(121, 48);
             this.txtcekicimodel.Name = "txtcekicimodel";
-            this.txtcekicimodel.Size = new System.Drawing.Size(132, 20);
+            this.txtcekicimodel.Size = new System.Drawing.Size(121, 20);
             this.txtcekicimodel.TabIndex = 2;
             // 
             // cmbcekicimarka
@@ -468,7 +468,7 @@ namespace TransportProje
             this.cmbcekicimarka.FormattingEnabled = true;
             this.cmbcekicimarka.Location = new System.Drawing.Point(121, 21);
             this.cmbcekicimarka.Name = "cmbcekicimarka";
-            this.cmbcekicimarka.Size = new System.Drawing.Size(132, 21);
+            this.cmbcekicimarka.Size = new System.Drawing.Size(121, 21);
             this.cmbcekicimarka.TabIndex = 1;
             // 
             // chkplaka
@@ -718,6 +718,7 @@ namespace TransportProje
             this.btnarapersonel.TabIndex = 7;
             this.btnarapersonel.Text = "Ara";
             this.btnarapersonel.UseVisualStyleBackColor = true;
+            this.btnarapersonel.Click += new System.EventHandler(this.btnarapersonel_Click);
             // 
             // cmbpersonelbirim
             // 
@@ -810,6 +811,7 @@ namespace TransportProje
             this.btnarauye.TabIndex = 11;
             this.btnarauye.Text = "Ara";
             this.btnarauye.UseVisualStyleBackColor = true;
+            this.btnarauye.Click += new System.EventHandler(this.btnarauye_Click);
             // 
             // chkuyemail
             // 
@@ -897,6 +899,7 @@ namespace TransportProje
             this.button6.TabIndex = 18;
             this.button6.Text = "Ara";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // chkdepohacmi
             // 

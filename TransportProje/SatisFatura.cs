@@ -287,5 +287,18 @@ namespace TransportProje
 
         }
 
+        private void toolStripDropDownButton2_Click(object sender, EventArgs e)
+        {
+            YillikGelirListele frmyillikgelir = new YillikGelirListele();
+            frmyillikgelir.ShowDialog();
+            this.Hide();
+        }
+
+        private void toolStripDropDownButton1_Click(object sender, EventArgs e)
+        {
+            AylikGelirListele frmayliklistele = new AylikGelirListele();
+            frmayliklistele.ShowDialog();
+            this.Hide();
+        }
     }
 }

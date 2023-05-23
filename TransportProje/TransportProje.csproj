@@ -48,6 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AylikGelirListele.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AylikGelirListele.Designer.cs">
+      <DependentUpon>AylikGelirListele.cs</DependentUpon>
+    </Compile>
     <Compile Include="CekiciEkle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +113,24 @@
     </Compile>
     <Compile Include="MusteriKarti.Designer.cs">
       <DependentUpon>MusteriKarti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MusteriKartiGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MusteriKartiGuncelle.Designer.cs">
+      <DependentUpon>MusteriKartiGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MusteriTakip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MusteriTakip.Designer.cs">
+      <DependentUpon>MusteriTakip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MusteriTakipGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MusteriTakipGuncelle.Designer.cs">
+      <DependentUpon>MusteriTakipGuncelle.cs</DependentUpon>
     </Compile>
     <Compile Include="Pazarlama.cs">
       <SubType>Form</SubType>
@@ -218,6 +242,15 @@
     <Compile Include="YakitTakipSil.Designer.cs">
       <DependentUpon>YakitTakipSil.cs</DependentUpon>
     </Compile>
+    <Compile Include="YillikGelirListele.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YillikGelirListele.Designer.cs">
+      <DependentUpon>YillikGelirListele.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AylikGelirListele.resx">
+      <DependentUpon>AylikGelirListele.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CekiciEkle.resx">
       <DependentUpon>CekiciEkle.cs</DependentUpon>
     </EmbeddedResource>
@@ -247,6 +280,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MusteriKarti.resx">
       <DependentUpon>MusteriKarti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MusteriKartiGuncelle.resx">
+      <DependentUpon>MusteriKartiGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MusteriTakip.resx">
+      <DependentUpon>MusteriTakip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MusteriTakipGuncelle.resx">
+      <DependentUpon>MusteriTakipGuncelle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pazarlama.resx">
       <DependentUpon>Pazarlama.cs</DependentUpon>
@@ -312,6 +354,9 @@
     <EmbeddedResource Include="YakitTakipSil.resx">
       <DependentUpon>YakitTakipSil.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="YillikGelirListele.resx">
+      <DependentUpon>YillikGelirListele.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -338,6 +383,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\2180133.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fatura.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

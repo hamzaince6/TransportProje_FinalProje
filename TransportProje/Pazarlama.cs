@@ -73,5 +73,12 @@ namespace TransportProje
             frmkartmusteri.Show();
             this.Hide();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MusteriTakip frmkartmusteritakip = new MusteriTakip();
+            frmkartmusteritakip.Show();
+            this.Hide();
+        }
     }
 }

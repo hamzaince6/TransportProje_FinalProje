@@ -829,6 +829,11 @@ namespace TransportProje
             DorseVeriYukleBoy();
             DorseVeriYukleYukseklik();
             SoforVeriYukleEhliyetSınıf();
+            PersonelVeriYukleOgrenimDurumu();
+            PersonelVeriYukleBirimi();
+            YakitVeriYukleYakitTipi();
+            YakitVeriYukleDepoHacmi();
+
 
         }
 
@@ -1011,6 +1016,239 @@ namespace TransportProje
         private void btnarasofor_Click(object sender, EventArgs e)
         {
             SoforKayitAra();
+        }
+
+
+        public void PersonelKayıtAra()
+        {
+            try
+            {
+                BaglantiAc();
+                DataSet ds = new DataSet();
+                string SorguPersonelKayitAra = "select * from Personel";
+                string SorguPersonelKayitAraTcNo = "Select * From Personel where TcNo='" + txtpersoneltc.Text + "'";
+                string SorguPersonelKayitAraOgrenimDurumu = "Select * From Personel where OgrenimDurumu='" + cmbpersonelogrenımdurumu.Text + "'";
+                string SorguPerosonelKayitAraBirim = "Select * From Personel where Birimi='" + cmbpersonelbirim.Text + "'";
+
+                string SorguTCNoOgrenimDurumu = "Select * From Personel where TcNo='" + txtpersoneltc.Text + "' And OgrenimDurumu='" + cmbpersonelogrenımdurumu.Text + "'";
+                string SorguTCNoBirim = "Select * From Personel where TcNo='" + txtpersoneltc.Text + "' And Birimi='" + cmbpersonelbirim.Text + "'";
+                string SorguOgrenimDurumuBirim = "Select * From Personel where OgrenimDurumu='" + cmbpersonelogrenımdurumu.Text + "' And Birimi='" + cmbpersonelbirim.Text + "'";
+                string SorguTCNoOgrenimDurumubirim = "Select * From Personel where TcNo='" + txtpersoneltc.Text + "' And OgrenimDurumu='" + cmbpersonelogrenımdurumu.Text + "'  And Birimi='" + cmbpersonelbirim.Text + "'";
+
+                if (chkpersoneltc.Checked && chkogrenimdurumu.Checked && chkpersonelbirim.Checked)
+                    SorguPersonelKayitAra = SorguTCNoOgrenimDurumubirim;
+                else if (chkpersoneltc.Checked && chkogrenimdurumu.Checked)
+                    SorguPersonelKayitAra = SorguTCNoOgrenimDurumu;
+                else if (chkpersoneltc.Checked && chkpersonelbirim.Checked)
+                    SorguPersonelKayitAra = SorguTCNoBirim;
+                else if (chkogrenimdurumu.Checked && chkpersonelbirim.Checked)
+                    SorguPersonelKayitAra = SorguOgrenimDurumuBirim;
+                else if (chkpersoneltc.Checked)
+                    SorguPersonelKayitAra = SorguPersonelKayitAraTcNo;
+                else if (chkogrenimdurumu.Checked)
+                    SorguPersonelKayitAra = SorguPersonelKayitAraOgrenimDurumu;
+                else if (chkpersonelbirim.Checked)
+                    SorguPersonelKayitAra = SorguPerosonelKayitAraBirim;
+
+
+                OleDbDataAdapter da = new OleDbDataAdapter(SorguPersonelKayitAra, Baglanti);
+                da.Fill(ds, "Personel");
+                dataGridView1.DataSource = ds.Tables["Personel"];
+                Baglanti.Close();
+            }
+            catch (Exception Hata)
+            {
+                //Sistem Hata Mesajını Göster
+                MessageBox.Show(Hata.Message, "Personel Kayıt Arama Hata Penceresi");
+            }
+        }
+
+
+        public void PersonelVeriYukleOgrenimDurumu()
+        {
+            try
+            {
+                Tanimlamalar.BaglantiAc();
+                string Sorgu = "Select OgrenimDurumu from Personel";
+                OleDbCommand YukleKomut = new OleDbCommand(Sorgu, Tanimlamalar.Baglanti);
+                OleDbDataReader dr = YukleKomut.ExecuteReader();
+                while (dr.Read())
+                {
+                    cmbpersonelogrenımdurumu.Items.Add(dr["OgrenimDurumu"]);
+                }
+                Tanimlamalar.Baglanti.Close();
+            }
+            catch (Exception Hata)
+            {
+                MessageBox.Show(Hata.Message, "Veri Yükleme Hata Penceresi");
+            }
+        }
+
+
+        public void PersonelVeriYukleBirimi()
+        {
+            try
+            {
+                Tanimlamalar.BaglantiAc();
+                string Sorgu = "Select Birimi from Personel";
+                OleDbCommand YukleKomut = new OleDbCommand(Sorgu, Tanimlamalar.Baglanti);
+                OleDbDataReader dr = YukleKomut.ExecuteReader();
+                while (dr.Read())
+                {
+                    cmbpersonelbirim.Items.Add(dr["Birimi"]);
+                }
+                Tanimlamalar.Baglanti.Close();
+            }
+            catch (Exception Hata)
+            {
+                MessageBox.Show(Hata.Message, "Veri Yükleme Hata Penceresi");
+            }
+        }
+
+        private void btnarapersonel_Click(object sender, EventArgs e)
+        {
+            PersonelKayıtAra();
+        }
+
+        public void UyeKayıtAra()
+        {
+            try
+            {
+                BaglantiAc();
+                DataSet ds = new DataSet();
+                string SorguUyeKayitAra = "select * from Giris";
+                string SorguUyeKayitAraKullaniciadi = "Select * From Giris where Kullaniciadi='" + txtuyekullaniciadi.Text + "'";
+                string SorguUyeKayitAraSifre = "Select * From Giris where Sifre ='" + txtuyesifre.Text + "'";
+                string SorguUyeKayitAraMail = "Select * From Giris where Mail='" + txtuyemail.Text + "'";
+
+                string SorguUyeKullaniciadiSifre = "Select * From Giris where Kullaniciadi='" + txtuyekullaniciadi.Text + "' And Sifre='" + txtuyesifre.Text + "'";
+                string SorguUyeKullaniciadiMail = "Select * From Giris where Kullaniciadi='" + txtuyekullaniciadi.Text + "' And Mail='" + txtuyemail.Text + "'";
+                string SorguUyeSifreMail = "Select * From Personel where Sifre='" + txtuyesifre.Text + "' And Mail='" + txtuyemail.Text + "'";
+                string SorguUyeKullaniciadiSifreMail = "Select * From Giris where Kullaniciadi='" + txtuyekullaniciadi.Text + "' And Sifre='" + txtuyesifre.Text + "'  And Mail='" + txtuyemail.Text + "'";
+
+                if (chkkullaniciadi.Checked && chkuyesifre.Checked && chkuyemail.Checked)
+                    SorguUyeKayitAra = SorguUyeKullaniciadiSifreMail;
+                else if (chkkullaniciadi.Checked && chkuyesifre.Checked)
+                    SorguUyeKayitAra = SorguUyeKullaniciadiSifre;
+                else if (chkkullaniciadi.Checked && chkuyemail.Checked)
+                    SorguUyeKayitAra = SorguUyeKullaniciadiMail;
+                else if (chkuyesifre.Checked && chkuyemail.Checked)
+                    SorguUyeKayitAra = SorguUyeSifreMail;
+                else if (chkkullaniciadi.Checked)
+                    SorguUyeKayitAra = SorguUyeKayitAraKullaniciadi;
+                else if (chkuyesifre.Checked)
+                    SorguUyeKayitAra = SorguUyeKayitAraSifre;
+                else if (chkuyemail.Checked)
+                    SorguUyeKayitAra = SorguUyeKayitAraMail;
+
+
+                OleDbDataAdapter da = new OleDbDataAdapter(SorguUyeKayitAra, Baglanti);
+                da.Fill(ds, "Giris");
+                dataGridView1.DataSource = ds.Tables["Giris"];
+                Baglanti.Close();
+            }
+            catch (Exception Hata)
+            {
+                //Sistem Hata Mesajını Göster
+                MessageBox.Show(Hata.Message, "Giris Kayıt Arama Hata Penceresi");
+            }
+        }
+
+        private void btnarauye_Click(object sender, EventArgs e)
+        {
+            UyeKayıtAra();
+        }
+
+
+        public void YakitKayıtAra()
+        {
+            try
+            {
+                BaglantiAc();
+                DataSet ds = new DataSet();
+                string SorguYakitKayitAra = "select * from YakitTakip";
+                string SorguYakitKayitAraPlaka = "Select * From YakitTakip where Plaka='" + txtyakitplaka.Text + "'";
+                string SorguYakitKayitAraYakitTipi = "Select * From YakitTakip where YakitTipi ='" + cmbyakittipi.Text + "'";
+                string SorguYakitKayitAraDepoHacmi = "Select * From YakitTakip where DepoHacmi='" + cmbdepohacmi.Text + "'";
+
+                string SorguYakitPlakaYakitTipi = "Select * From YakitTakip where Plaka='" + txtyakitplaka.Text + "' And YakitTipi='" + cmbyakittipi.Text + "'";
+                string SorguYakitPlakaDepoHacmi = "Select * From YakitTakip where Plaka='" + txtyakitplaka.Text + "' And DepoHacmi='" + cmbdepohacmi.Text + "'";
+                string SorguYakitTipiDepoHacmi = "Select * From YakitTakip where YakitTipi='" + cmbyakittipi.Text + "' And DepoHacmi='" + cmbdepohacmi.Text + "'";
+                string SorguYakitPlakaYakitTipiDepoHacmi = "Select * From YakitTakip where Plaka='" + txtyakitplaka.Text + "' And YakitTipi='" + cmbyakittipi.Text + "'  And DepoHacmi='" + cmbdepohacmi.Text + "'";
+
+                if (chkyakitplaka.Checked && chkyakittipi.Checked && chkdepohacmi.Checked)
+                    SorguYakitKayitAra = SorguYakitPlakaYakitTipiDepoHacmi;
+                else if (chkyakitplaka.Checked && chkyakittipi.Checked)
+                    SorguYakitKayitAra = SorguYakitPlakaYakitTipi;
+                else if (chkyakitplaka.Checked && chkdepohacmi.Checked)
+                    SorguYakitKayitAra = SorguYakitPlakaDepoHacmi;
+                else if (chkyakittipi.Checked && chkdepohacmi.Checked)
+                    SorguYakitKayitAra = SorguYakitTipiDepoHacmi;
+                else if (chkyakitplaka.Checked)
+                    SorguYakitKayitAra = SorguYakitKayitAraPlaka;
+                else if (chkyakittipi.Checked)
+                    SorguYakitKayitAra = SorguYakitKayitAraYakitTipi;
+                else if (chkdepohacmi.Checked)
+                    SorguYakitKayitAra = SorguYakitKayitAraDepoHacmi;
+
+
+                OleDbDataAdapter da = new OleDbDataAdapter(SorguYakitKayitAra, Baglanti);
+                da.Fill(ds, "YakitTakip");
+                dataGridView1.DataSource = ds.Tables["YakitTakip"];
+                Baglanti.Close();
+            }
+            catch (Exception Hata)
+            {
+                //Sistem Hata Mesajını Göster
+                MessageBox.Show(Hata.Message, "YakitTakip Kayıt Arama Hata Penceresi");
+            }
+        }
+
+
+        public void YakitVeriYukleYakitTipi()
+        {
+            try
+            {
+                Tanimlamalar.BaglantiAc();
+                string Sorgu = "Select YakitTipi from YakitTakip";
+                OleDbCommand YukleKomut = new OleDbCommand(Sorgu, Tanimlamalar.Baglanti);
+                OleDbDataReader dr = YukleKomut.ExecuteReader();
+                while (dr.Read())
+                {
+                    cmbyakittipi.Items.Add(dr["YakitTipi"]);
+                }
+                Tanimlamalar.Baglanti.Close();
+            }
+            catch (Exception Hata)
+            {
+                MessageBox.Show(Hata.Message, "Veri Yükleme Hata Penceresi");
+            }
+        }
+
+
+        public void YakitVeriYukleDepoHacmi()
+        {
+            try
+            {
+                Tanimlamalar.BaglantiAc();
+                string Sorgu = "Select DepoHacmi from YakitTakip";
+                OleDbCommand YukleKomut = new OleDbCommand(Sorgu, Tanimlamalar.Baglanti);
+                OleDbDataReader dr = YukleKomut.ExecuteReader();
+                while (dr.Read())
+                {
+                    cmbdepohacmi.Items.Add(dr["DepoHacmi"]);
+                }
+                Tanimlamalar.Baglanti.Close();
+            }
+            catch (Exception Hata)
+            {
+                MessageBox.Show(Hata.Message, "Veri Yükleme Hata Penceresi");
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            YakitKayıtAra();
         }
     }
 }
