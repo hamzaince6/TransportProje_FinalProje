@@ -149,7 +149,9 @@ namespace TransportProje
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            KaraSoforTablosu frmkara = new KaraSoforTablosu();
+            frmkara.Show();
+            this.Hide();
         }
     }
 }
