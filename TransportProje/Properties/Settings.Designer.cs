@@ -33,5 +33,15 @@ namespace TransportProje.Properties {
                 return ((string)(this["NakliyatProje1ConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\\Data.accdb")]
+        public string DataConnectionString {
+            get {
+                return ((string)(this["DataConnectionString"]));
+            }
+        }
     }
 }

@@ -154,5 +154,75 @@ namespace TransportProje
             // Veri kaynağındaki değişiklikleri otomatik olarak güncelle
             ((DataTable)dataGridView1.DataSource).AcceptChanges();
         }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            lblAlanalan.Text = "Müşteri :";
+            txtAranan.Focus();
+            txtAranan.Text = "";
+        }
+
+        private void radtcno_CheckedChanged(object sender, EventArgs e)
+        {
+            lblAlanalan.Text = "Fatura Türü :";
+            txtAranan.Focus();
+            txtAranan.Text = "";
+        }
+
+        public void SoforHizliAra()
+        {
+            try
+            {
+
+
+
+                BaglantiAc();
+                DataSet ds = new DataSet();
+                string SorguTumKayitlar = "select * from SatisFatura";
+                string SorguBayiilebaslayan = "Select * From SatisFatura where FaturaTuru Like '" + txtAranan.Text + "%'";
+                string SorguBayiilebiten = "Select * From SatisFatura where FaturaTuru Like '%" + txtAranan.Text + "'";
+                string SorguBayiiceren = "Select * From SatisFatura where FaturaTuru Like '%" + txtAranan.Text + "%'";
+
+                string SorguMalindegerilebaslayan = "Select * From SatisFatura where Musteri Like '" + txtAranan.Text + "%'";
+                string SorguMalındegerilebiten = "Select * From SatisFatura where Musteri Like '%" + txtAranan.Text + "'";
+                string SorguMalındegericeren = "Select * From SatisFatura where Musteri Like '%" + txtAranan.Text + "%'";
+
+                if (cmbAramaTuru.Text == "İle Başlayan")
+                {
+                    if (radtcno.Checked)
+                        SorguTumKayitlar = SorguBayiilebaslayan;
+                    else
+                        SorguTumKayitlar = SorguMalindegerilebaslayan;
+                }
+                else if (cmbAramaTuru.Text == "İle Biten")
+                {
+                    if (radtcno.Checked)
+                        SorguTumKayitlar = SorguBayiilebiten;
+                    else
+                        SorguTumKayitlar = SorguMalındegerilebiten;
+                }
+                else if (cmbAramaTuru.Text == "İçeren")
+                {
+                    if (radtcno.Checked)
+                        SorguTumKayitlar = SorguBayiiceren;
+                    else
+                        SorguTumKayitlar = SorguMalındegericeren;
+                }
+                OleDbDataAdapter da = new OleDbDataAdapter(SorguTumKayitlar, Baglanti);
+                da.Fill(ds, "SatisFatura");
+                dataGridView1.DataSource = ds.Tables["SatisFatura"];
+                Baglanti.Close();
+            }
+            catch (Exception Hata)
+            {
+                //Sistem Hata Mesajını Göster
+                MessageBox.Show(Hata.Message, "Hızlı Arama Hata Penceresi");
+            }
+        }
+
+        private void txtAranan_TextChanged(object sender, EventArgs e)
+        {
+            SoforHizliAra();
+        }
     }
 }

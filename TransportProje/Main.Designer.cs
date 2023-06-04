@@ -67,6 +67,7 @@ namespace TransportProje
             this.button2.Size = new System.Drawing.Size(267, 256);
             this.button2.TabIndex = 1;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -152,6 +153,7 @@ namespace TransportProje
             this.lbleuro.Size = new System.Drawing.Size(46, 17);
             this.lbleuro.TabIndex = 8;
             this.lbleuro.Text = "label2";
+            this.lbleuro.Click += new System.EventHandler(this.lbleuro_Click);
             // 
             // lblsterlin
             // 
@@ -164,6 +166,7 @@ namespace TransportProje
             this.lblsterlin.Size = new System.Drawing.Size(46, 17);
             this.lblsterlin.TabIndex = 9;
             this.lblsterlin.Text = "label3";
+            this.lblsterlin.Click += new System.EventHandler(this.lblsterlin_Click);
             // 
             // timer1
             // 

@@ -300,5 +300,17 @@ namespace TransportProje
             frmayliklistele.ShowDialog();
             this.Hide();
         }
+
+        private void satisFaturaGenelRaporToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+          
+            
+        }
+
+        private void toolStripStatusLabel1_Click(object sender, EventArgs e)
+        {
+            RaporSatisFatura frmayliklistele = new RaporSatisFatura();
+            frmayliklistele.ShowDialog();
+        }
     }
 }

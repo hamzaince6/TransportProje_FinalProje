@@ -63,7 +63,20 @@ namespace TransportProje
             this.txtuyaritarihi = new System.Windows.Forms.MaskedTextBox();
             this.txtkonu = new System.Windows.Forms.MaskedTextBox();
             this.cmbsonuc = new System.Windows.Forms.ComboBox();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtAranan = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.radtcno = new System.Windows.Forms.RadioButton();
+            this.radplaka = new System.Windows.Forms.RadioButton();
+            this.cmbAramaTuru = new System.Windows.Forms.ComboBox();
+            this.lblAlanalan = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridMusteriTakip)).BeginInit();
+            this.statusStrip1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // button7
@@ -148,7 +161,7 @@ namespace TransportProje
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button5.Location = new System.Drawing.Point(1134, 665);
+            this.button5.Location = new System.Drawing.Point(1134, 643);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(90, 50);
             this.button5.TabIndex = 80;
@@ -159,7 +172,7 @@ namespace TransportProje
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button4.Location = new System.Drawing.Point(846, 665);
+            this.button4.Location = new System.Drawing.Point(846, 643);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(90, 50);
             this.button4.TabIndex = 79;
@@ -173,7 +186,7 @@ namespace TransportProje
             this.frmdegistir.FlatAppearance.BorderSize = 0;
             this.frmdegistir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.frmdegistir.ForeColor = System.Drawing.Color.Black;
-            this.frmdegistir.Location = new System.Drawing.Point(1038, 665);
+            this.frmdegistir.Location = new System.Drawing.Point(1038, 643);
             this.frmdegistir.Name = "frmdegistir";
             this.frmdegistir.Size = new System.Drawing.Size(90, 50);
             this.frmdegistir.TabIndex = 78;
@@ -187,7 +200,7 @@ namespace TransportProje
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(942, 666);
+            this.button2.Location = new System.Drawing.Point(942, 644);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(90, 50);
             this.button2.TabIndex = 77;
@@ -201,7 +214,7 @@ namespace TransportProje
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(1230, 666);
+            this.button1.Location = new System.Drawing.Point(1230, 644);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(90, 50);
             this.button1.TabIndex = 76;
@@ -215,11 +228,11 @@ namespace TransportProje
             this.dataGridMusteriTakip.AllowUserToDeleteRows = false;
             this.dataGridMusteriTakip.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridMusteriTakip.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridMusteriTakip.Location = new System.Drawing.Point(421, 154);
+            this.dataGridMusteriTakip.Location = new System.Drawing.Point(626, 154);
             this.dataGridMusteriTakip.Name = "dataGridMusteriTakip";
             this.dataGridMusteriTakip.ReadOnly = true;
             this.dataGridMusteriTakip.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridMusteriTakip.Size = new System.Drawing.Size(899, 455);
+            this.dataGridMusteriTakip.Size = new System.Drawing.Size(694, 455);
             this.dataGridMusteriTakip.TabIndex = 75;
             // 
             // cmbdurumu
@@ -441,6 +454,113 @@ namespace TransportProje
             this.cmbsonuc.Size = new System.Drawing.Size(172, 24);
             this.cmbsonuc.TabIndex = 87;
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 707);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(1350, 22);
+            this.statusStrip1.TabIndex = 88;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(144, 17);
+            this.toolStripStatusLabel1.Text = "Müşteri Takip Genel Rapor";
+            this.toolStripStatusLabel1.Click += new System.EventHandler(this.toolStripStatusLabel1_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.txtAranan);
+            this.groupBox1.Controls.Add(this.groupBox2);
+            this.groupBox1.Controls.Add(this.cmbAramaTuru);
+            this.groupBox1.Controls.Add(this.lblAlanalan);
+            this.groupBox1.Controls.Add(this.label14);
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
+            this.groupBox1.Location = new System.Drawing.Point(390, 161);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(230, 165);
+            this.groupBox1.TabIndex = 89;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Müşteri Fatura Arama";
+            // 
+            // txtAranan
+            // 
+            this.txtAranan.Location = new System.Drawing.Point(77, 119);
+            this.txtAranan.Name = "txtAranan";
+            this.txtAranan.Size = new System.Drawing.Size(134, 20);
+            this.txtAranan.TabIndex = 3;
+            this.txtAranan.TextChanged += new System.EventHandler(this.txtAranan_TextChanged);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.radtcno);
+            this.groupBox2.Controls.Add(this.radplaka);
+            this.groupBox2.ForeColor = System.Drawing.Color.White;
+            this.groupBox2.Location = new System.Drawing.Point(9, 44);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(202, 58);
+            this.groupBox2.TabIndex = 2;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Alan Seçimi";
+            // 
+            // radtcno
+            // 
+            this.radtcno.AutoSize = true;
+            this.radtcno.Location = new System.Drawing.Point(83, 19);
+            this.radtcno.Name = "radtcno";
+            this.radtcno.Size = new System.Drawing.Size(50, 17);
+            this.radtcno.TabIndex = 0;
+            this.radtcno.TabStop = true;
+            this.radtcno.Text = "Konu";
+            this.radtcno.UseVisualStyleBackColor = true;
+            this.radtcno.CheckedChanged += new System.EventHandler(this.radtcno_CheckedChanged);
+            // 
+            // radplaka
+            // 
+            this.radplaka.AutoSize = true;
+            this.radplaka.Location = new System.Drawing.Point(6, 19);
+            this.radplaka.Name = "radplaka";
+            this.radplaka.Size = new System.Drawing.Size(62, 17);
+            this.radplaka.TabIndex = 0;
+            this.radplaka.TabStop = true;
+            this.radplaka.Text = "Durumu";
+            this.radplaka.UseVisualStyleBackColor = true;
+            this.radplaka.CheckedChanged += new System.EventHandler(this.radplaka_CheckedChanged);
+            // 
+            // cmbAramaTuru
+            // 
+            this.cmbAramaTuru.FormattingEnabled = true;
+            this.cmbAramaTuru.Items.AddRange(new object[] {
+            "İle Başlayan",
+            "İle Biten",
+            "İçeren"});
+            this.cmbAramaTuru.Location = new System.Drawing.Point(77, 17);
+            this.cmbAramaTuru.Name = "cmbAramaTuru";
+            this.cmbAramaTuru.Size = new System.Drawing.Size(134, 21);
+            this.cmbAramaTuru.TabIndex = 1;
+            // 
+            // lblAlanalan
+            // 
+            this.lblAlanalan.AutoSize = true;
+            this.lblAlanalan.Location = new System.Drawing.Point(6, 122);
+            this.lblAlanalan.Name = "lblAlanalan";
+            this.lblAlanalan.Size = new System.Drawing.Size(41, 13);
+            this.lblAlanalan.TabIndex = 0;
+            this.lblAlanalan.Text = "Müşteri";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(6, 25);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(65, 13);
+            this.label14.TabIndex = 0;
+            this.label14.Text = "Arama Türü ";
+            // 
             // MusteriTakip
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -448,6 +568,8 @@ namespace TransportProje
             this.BackgroundImage = global::TransportProje.Properties.Resources.Fatura;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1350, 729);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.cmbsonuc);
             this.Controls.Add(this.txtkonu);
             this.Controls.Add(this.txtuyaritarihi);
@@ -486,6 +608,12 @@ namespace TransportProje
             this.Text = "MusteriTakip";
             this.Load += new System.EventHandler(this.MusteriTakip_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridMusteriTakip)).EndInit();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -526,5 +654,15 @@ namespace TransportProje
         private System.Windows.Forms.MaskedTextBox txtuyaritarihi;
         private System.Windows.Forms.MaskedTextBox txtkonu;
         private System.Windows.Forms.ComboBox cmbsonuc;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox txtAranan;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.RadioButton radtcno;
+        private System.Windows.Forms.RadioButton radplaka;
+        private System.Windows.Forms.ComboBox cmbAramaTuru;
+        private System.Windows.Forms.Label lblAlanalan;
+        private System.Windows.Forms.Label label14;
     }
 }

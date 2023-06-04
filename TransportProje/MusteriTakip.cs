@@ -337,5 +337,82 @@ namespace TransportProje
             frmdegistir.Show();
             this.Close();
         }
+
+        private void toolStripStatusLabel1_Click(object sender, EventArgs e)
+        {
+            RaporMusteriTakip frm2 = new RaporMusteriTakip();
+            frm2.ShowDialog();
+
+        }
+
+        public void SoforHizliAra()
+        {
+            try
+            {
+
+
+
+                BaglantiAc();
+                DataSet ds = new DataSet();
+                string SorguTumKayitlar = "select * from MusteriTakip";
+                string SorguBayiilebaslayan = "Select * From MusteriTakip where Konu Like '" + txtAranan.Text + "%'";
+                string SorguBayiilebiten = "Select * From MusteriTakip where Konu Like '%" + txtAranan.Text + "'";
+                string SorguBayiiceren = "Select * From MusteriTakip where Konu Like '%" + txtAranan.Text + "%'";
+
+                string SorguMalindegerilebaslayan = "Select * From MusteriTakip where Durumu Like '" + txtAranan.Text + "%'";
+                string SorguMalındegerilebiten = "Select * From MusteriTakip where Durumu Like '%" + txtAranan.Text + "'";
+                string SorguMalındegericeren = "Select * From MusteriTakip where Durumu Like '%" + txtAranan.Text + "%'";
+
+                if (cmbAramaTuru.Text == "İle Başlayan")
+                {
+                    if (radtcno.Checked)
+                        SorguTumKayitlar = SorguBayiilebaslayan;
+                    else
+                        SorguTumKayitlar = SorguMalindegerilebaslayan;
+                }
+                else if (cmbAramaTuru.Text == "İle Biten")
+                {
+                    if (radtcno.Checked)
+                        SorguTumKayitlar = SorguBayiilebiten;
+                    else
+                        SorguTumKayitlar = SorguMalındegerilebiten;
+                }
+                else if (cmbAramaTuru.Text == "İçeren")
+                {
+                    if (radtcno.Checked)
+                        SorguTumKayitlar = SorguBayiiceren;
+                    else
+                        SorguTumKayitlar = SorguMalındegericeren;
+                }
+                OleDbDataAdapter da = new OleDbDataAdapter(SorguTumKayitlar, Baglanti);
+                da.Fill(ds, "MusteriTakip");
+                dataGridMusteriTakip.DataSource = ds.Tables["MusteriTakip"];
+                Baglanti.Close();
+            }
+            catch (Exception Hata)
+            {
+                //Sistem Hata Mesajını Göster
+                MessageBox.Show(Hata.Message, "Hızlı Arama Hata Penceresi");
+            }
+        }
+
+        private void radplaka_CheckedChanged(object sender, EventArgs e)
+        {
+            lblAlanalan.Text = "Durum :";
+            txtAranan.Focus();
+            txtAranan.Text = "";
+        }
+
+        private void radtcno_CheckedChanged(object sender, EventArgs e)
+        {
+            lblAlanalan.Text = "Konu :";
+            txtAranan.Focus();
+            txtAranan.Text = "";
+        }
+
+        private void txtAranan_TextChanged(object sender, EventArgs e)
+        {
+            SoforHizliAra();
+        }
     }
 }

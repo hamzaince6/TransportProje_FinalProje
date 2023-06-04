@@ -1250,5 +1250,46 @@ namespace TransportProje
         {
             YakitKayıtAra();
         }
+
+        private void çekiciRaporToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RaporCekici frmtyeni = new RaporCekici();
+            frmtyeni.ShowDialog();
+        }
+
+        private void dorseRaporToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RaporDorse frmtyeni = new RaporDorse();
+            frmtyeni.ShowDialog();
+        }
+
+        private void soförRaporToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RaporSofor frmtyeni = new RaporSofor();
+            frmtyeni.ShowDialog();
+        }
+
+        private void personelRaporToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RaporPersonel frmtyeni = new RaporPersonel();
+            frmtyeni.ShowDialog();
+        }
+
+        private void üyelerRaporToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RaporUye frmtyeni = new RaporUye();
+            frmtyeni.ShowDialog();
+        }
+
+        private void yakıtTakipRaporToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RaporYakitTakip frmtyeni = new RaporYakitTakip();
+            frmtyeni.ShowDialog();
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

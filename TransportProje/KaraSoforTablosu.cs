@@ -258,6 +258,9 @@ namespace TransportProje
             button7.FlatAppearance.MouseDownBackColor = Color.Transparent;
             button7.FlatAppearance.MouseOverBackColor = Color.Transparent;
             SoforListele();
+            SoforVeriYukleEhliyetSınıf12();
+
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -369,6 +372,145 @@ namespace TransportProje
             frmdegistir.txttakografno.Text = dataGridSofor.CurrentRow.Cells[15].Value.ToString();
             frmdegistir.ShowDialog();
             this.Hide();
+        }
+
+        public void SoforKayitAra12()
+        {
+            try
+            {
+                BaglantiAc();
+                DataSet ds = new DataSet();
+                string SorguSoforKayitAra = "select * from Sofor";
+                string SorguSoforKayitAraTcKimlik = "Select * From Sofor where TcKimlikNo='" + txtkaratc.Text + "'";
+                string SorguSoforKayitAraPlaka = "Select * From Sofor where Plaka='" + txtkaraplaka.Text + "'";
+                string SorguSoforKayitAraEhliyetSinif = "Select * From Sofor where EhliyetSinifi='" + cmbehliyet155.Text + "'";
+
+                string SorguTCNoPlaka = "Select * From Sofor where TcKimlikNo='" + txtkaratc.Text + "' And Plaka='" + txtkaraplaka.Text + "'";
+                string SorguTCNoEhliyetSınıfı = "Select * From Sofor where TcKimlikNo='" + txtkaratc.Text + "' And EhliyetSinifi='" + cmbehliyet155.Text + "'";
+                string SorguPlakaEhliyetSınıfı = "Select * From Sofor where Plaka='" + txtkaraplaka.Text + "' And EhliyetSinifi='" + cmbehliyet155.Text + "'";
+                string SorguTCNoPlakaEhliyetSınıfı = "Select * From Sofor where TcKimlikNo='" + txtkaratc.Text + "' And Plaka='" + txtkaraplaka.Text + "'  And TcKimlikNo='" + txtkaratc.Text + "'";
+
+                if (chktcno.Checked && chkplaka12.Checked && chkehliyetsinifi255.Checked)
+                    SorguSoforKayitAra = SorguTCNoPlakaEhliyetSınıfı;
+                else if (chktcno.Checked && chkplaka12.Checked)
+                    SorguSoforKayitAra = SorguTCNoPlaka;
+                else if (chktcno.Checked && chkehliyetsinifi255.Checked)
+                    SorguSoforKayitAra = SorguTCNoEhliyetSınıfı;
+                else if (chkplaka12.Checked && chkehliyetsinifi255.Checked)
+                    SorguSoforKayitAra = SorguPlakaEhliyetSınıfı;
+                else if (chktcno.Checked)
+                    SorguSoforKayitAra = SorguSoforKayitAraTcKimlik;
+                else if (chkplaka12.Checked)
+                    SorguSoforKayitAra = SorguSoforKayitAraPlaka;
+                else if (chkehliyetsinifi255.Checked)
+                    SorguSoforKayitAra = SorguSoforKayitAraEhliyetSinif;
+
+
+                OleDbDataAdapter da = new OleDbDataAdapter(SorguSoforKayitAra, Baglanti);
+                da.Fill(ds, "Sofor");
+                dataGridSofor.DataSource = ds.Tables["Sofor"];
+                Baglanti.Close();
+            }
+            catch (Exception Hata)
+            {
+                //Sistem Hata Mesajını Göster
+                MessageBox.Show(Hata.Message, "Kayıt Arama Hata Penceresi");
+            }
+        }
+
+        public void SoforVeriYukleEhliyetSınıf12()
+        {
+            try
+            {
+                KaraSoforTablosu.BaglantiAc();
+                string Sorgu = "Select EhliyetSinifi from Sofor";
+                OleDbCommand YukleKomut = new OleDbCommand(Sorgu, KaraSoforTablosu.Baglanti);
+                OleDbDataReader dr = YukleKomut.ExecuteReader();
+                while (dr.Read())
+                {
+                    cmbehliyet155.Items.Add(dr["EhliyetSinifi"]);
+                }
+                KaraSoforTablosu.Baglanti.Close();
+            }
+            catch (Exception Hata)
+            {
+                MessageBox.Show(Hata.Message, "Veri Yükleme Hata Penceresi");
+            }
+        }
+
+        private void btnkaraara_Click(object sender, EventArgs e)
+        {
+            SoforKayitAra12();
+        }
+
+        private void radplaka_CheckedChanged(object sender, EventArgs e)
+        {
+            lblAlanalan.Text = "Plaka :";
+            txtAranan.Focus();
+            txtAranan.Text = "";
+        }
+
+        private void radtcno_CheckedChanged(object sender, EventArgs e)
+        {
+            lblAlanalan.Text = "Tc No :";
+            txtAranan.Focus();
+            txtAranan.Text = "";
+        }
+
+        public void SoforHizliAra()
+        {
+            try
+            {
+
+
+
+                BaglantiAc();
+                DataSet ds = new DataSet();
+                string SorguTumKayitlar = "select * from Sofor";
+                string SorguBayiilebaslayan = "Select * From Sofor where TcKimlikNo Like '" + txtAranan.Text + "%'";
+                string SorguBayiilebiten = "Select * From Sofor where TcKimlikNo Like '%" + txtAranan.Text + "'";
+                string SorguBayiiceren = "Select * From Sofor where TcKimlikNo Like '%" + txtAranan.Text + "%'";
+
+                string SorguMalindegerilebaslayan = "Select * From Sofor where Plaka Like '" + txtAranan.Text + "%'";
+                string SorguMalındegerilebiten = "Select * From Sofor where Plaka Like '%" + txtAranan.Text + "'";
+                string SorguMalındegericeren = "Select * From Sofor where Plaka Like '%" + txtAranan.Text + "%'";
+
+                if (cmbAramaTuru.Text == "İle Başlayan")
+                {
+                    if (radtcno.Checked)
+                        SorguTumKayitlar = SorguBayiilebaslayan;
+                    else
+                        SorguTumKayitlar = SorguMalindegerilebaslayan;
+                }
+                else if (cmbAramaTuru.Text == "İle Biten")
+                {
+                    if (radtcno.Checked)
+                        SorguTumKayitlar = SorguBayiilebiten;
+                    else
+                        SorguTumKayitlar = SorguMalındegerilebiten;
+                }
+                else if (cmbAramaTuru.Text == "İçeren")
+                {
+                    if (radtcno.Checked)
+                        SorguTumKayitlar = SorguBayiiceren;
+                    else
+                        SorguTumKayitlar = SorguMalındegericeren;
+                }
+                OleDbDataAdapter da = new OleDbDataAdapter(SorguTumKayitlar, Baglanti);
+                da.Fill(ds, "Sofor");
+                dataGridSofor.DataSource = ds.Tables["Sofor"];
+                Baglanti.Close();
+            }
+            catch (Exception Hata)
+            {
+                //Sistem Hata Mesajını Göster
+                MessageBox.Show(Hata.Message, "Hızlı Arama Hata Penceresi");
+            }
+        }
+
+        private void txtAranan_TextChanged(object sender, EventArgs e)
+        {
+            SoforHizliAra();
         }
     }
 }

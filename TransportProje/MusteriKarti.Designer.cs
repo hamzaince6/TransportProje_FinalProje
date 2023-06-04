@@ -68,7 +68,20 @@ namespace TransportProje
             this.button4 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtAranan = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.radtcno = new System.Windows.Forms.RadioButton();
+            this.radplaka = new System.Windows.Forms.RadioButton();
+            this.cmbAramaTuru = new System.Windows.Forms.ComboBox();
+            this.lblAlanalan = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridMusteriKarti)).BeginInit();
+            this.statusStrip1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblsterlin
@@ -509,11 +522,11 @@ namespace TransportProje
             this.dataGridMusteriKarti.AllowUserToDeleteRows = false;
             this.dataGridMusteriKarti.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridMusteriKarti.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridMusteriKarti.Location = new System.Drawing.Point(409, 136);
+            this.dataGridMusteriKarti.Location = new System.Drawing.Point(608, 143);
             this.dataGridMusteriKarti.Name = "dataGridMusteriKarti";
             this.dataGridMusteriKarti.ReadOnly = true;
             this.dataGridMusteriKarti.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridMusteriKarti.Size = new System.Drawing.Size(899, 455);
+            this.dataGridMusteriKarti.Size = new System.Drawing.Size(700, 448);
             this.dataGridMusteriKarti.TabIndex = 41;
             this.dataGridMusteriKarti.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridMusteriKarti_CellContentClick);
             // 
@@ -594,6 +607,113 @@ namespace TransportProje
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 707);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(1350, 22);
+            this.statusStrip1.TabIndex = 50;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(141, 17);
+            this.toolStripStatusLabel1.Text = "Müşteri Kartı Genel Rapor";
+            this.toolStripStatusLabel1.Click += new System.EventHandler(this.toolStripStatusLabel1_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.txtAranan);
+            this.groupBox1.Controls.Add(this.groupBox2);
+            this.groupBox1.Controls.Add(this.cmbAramaTuru);
+            this.groupBox1.Controls.Add(this.lblAlanalan);
+            this.groupBox1.Controls.Add(this.label14);
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
+            this.groupBox1.Location = new System.Drawing.Point(372, 143);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(230, 165);
+            this.groupBox1.TabIndex = 51;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Satıs Fatura Arama";
+            // 
+            // txtAranan
+            // 
+            this.txtAranan.Location = new System.Drawing.Point(77, 119);
+            this.txtAranan.Name = "txtAranan";
+            this.txtAranan.Size = new System.Drawing.Size(134, 20);
+            this.txtAranan.TabIndex = 3;
+            this.txtAranan.TextChanged += new System.EventHandler(this.txtAranan_TextChanged);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.radtcno);
+            this.groupBox2.Controls.Add(this.radplaka);
+            this.groupBox2.ForeColor = System.Drawing.Color.White;
+            this.groupBox2.Location = new System.Drawing.Point(9, 44);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(202, 58);
+            this.groupBox2.TabIndex = 2;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Alan Seçimi";
+            // 
+            // radtcno
+            // 
+            this.radtcno.AutoSize = true;
+            this.radtcno.Location = new System.Drawing.Point(83, 19);
+            this.radtcno.Name = "radtcno";
+            this.radtcno.Size = new System.Drawing.Size(84, 17);
+            this.radtcno.TabIndex = 0;
+            this.radtcno.TabStop = true;
+            this.radtcno.Text = "Vergi Dairesi";
+            this.radtcno.UseVisualStyleBackColor = true;
+            this.radtcno.CheckedChanged += new System.EventHandler(this.radtcno_CheckedChanged);
+            // 
+            // radplaka
+            // 
+            this.radplaka.AutoSize = true;
+            this.radplaka.Location = new System.Drawing.Point(6, 19);
+            this.radplaka.Name = "radplaka";
+            this.radplaka.Size = new System.Drawing.Size(73, 17);
+            this.radplaka.TabIndex = 0;
+            this.radplaka.TabStop = true;
+            this.radplaka.Text = "Hesap No";
+            this.radplaka.UseVisualStyleBackColor = true;
+            this.radplaka.CheckedChanged += new System.EventHandler(this.radplaka_CheckedChanged);
+            // 
+            // cmbAramaTuru
+            // 
+            this.cmbAramaTuru.FormattingEnabled = true;
+            this.cmbAramaTuru.Items.AddRange(new object[] {
+            "İle Başlayan",
+            "İle Biten",
+            "İçeren"});
+            this.cmbAramaTuru.Location = new System.Drawing.Point(77, 17);
+            this.cmbAramaTuru.Name = "cmbAramaTuru";
+            this.cmbAramaTuru.Size = new System.Drawing.Size(134, 21);
+            this.cmbAramaTuru.TabIndex = 1;
+            // 
+            // lblAlanalan
+            // 
+            this.lblAlanalan.AutoSize = true;
+            this.lblAlanalan.Location = new System.Drawing.Point(6, 122);
+            this.lblAlanalan.Name = "lblAlanalan";
+            this.lblAlanalan.Size = new System.Drawing.Size(41, 13);
+            this.lblAlanalan.TabIndex = 0;
+            this.lblAlanalan.Text = "Müşteri";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(6, 25);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(65, 13);
+            this.label14.TabIndex = 0;
+            this.label14.Text = "Arama Türü ";
+            // 
             // MusteriKarti
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -601,6 +721,8 @@ namespace TransportProje
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1350, 729);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.frmdegistir);
@@ -643,6 +765,12 @@ namespace TransportProje
             this.Text = "MusteriKarti";
             this.Load += new System.EventHandler(this.MusteriKarti_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridMusteriKarti)).EndInit();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -687,5 +815,15 @@ namespace TransportProje
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox txtAranan;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.RadioButton radtcno;
+        private System.Windows.Forms.RadioButton radplaka;
+        private System.Windows.Forms.ComboBox cmbAramaTuru;
+        private System.Windows.Forms.Label lblAlanalan;
+        private System.Windows.Forms.Label label14;
     }
 }

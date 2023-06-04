@@ -153,5 +153,22 @@ namespace TransportProje
             frmkara.Show();
             this.Hide();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            YukPlanlama frmyuk = new YukPlanlama();
+            frmyuk.Show();
+            this.Hide();
+        }
+
+        private void lbleuro_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblsterlin_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

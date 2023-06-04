@@ -33,6 +33,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
@@ -71,6 +89,11 @@
     </Compile>
     <Compile Include="CekiciSil.Designer.cs">
       <DependentUpon>CekiciSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="DorseEkle.cs">
       <SubType>Form</SubType>
@@ -176,6 +199,60 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RaporCekici.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RaporCekici.Designer.cs">
+      <DependentUpon>RaporCekici.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RaporDorse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RaporDorse.Designer.cs">
+      <DependentUpon>RaporDorse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RaporMusteriKarti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RaporMusteriKarti.Designer.cs">
+      <DependentUpon>RaporMusteriKarti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RaporMusteriTakip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RaporMusteriTakip.Designer.cs">
+      <DependentUpon>RaporMusteriTakip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RaporPersonel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RaporPersonel.Designer.cs">
+      <DependentUpon>RaporPersonel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RaporSatisFatura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RaporSatisFatura.Designer.cs">
+      <DependentUpon>RaporSatisFatura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RaporSofor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RaporSofor.Designer.cs">
+      <DependentUpon>RaporSofor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RaporUye.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RaporUye.Designer.cs">
+      <DependentUpon>RaporUye.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RaporYakitTakip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RaporYakitTakip.Designer.cs">
+      <DependentUpon>RaporYakitTakip.cs</DependentUpon>
+    </Compile>
     <Compile Include="SatisFatura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,6 +289,7 @@
     <Compile Include="SoforSil.Designer.cs">
       <DependentUpon>SoforSil.cs</DependentUpon>
     </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Tanimlamalar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -260,9 +338,28 @@
     <Compile Include="YillikGelirListele.Designer.cs">
       <DependentUpon>YillikGelirListele.cs</DependentUpon>
     </Compile>
+    <Compile Include="YukPlanlama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YukPlanlama.Designer.cs">
+      <DependentUpon>YukPlanlama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YukPlanlama1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YukPlanlama1.Designer.cs">
+      <DependentUpon>YukPlanlama1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YukPlanlama2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YukPlanlama2.Designer.cs">
+      <DependentUpon>YukPlanlama2.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AylikGelirListele.resx">
       <DependentUpon>AylikGelirListele.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Cekici.rdlc" />
     <EmbeddedResource Include="CekiciEkle.resx">
       <DependentUpon>CekiciEkle.cs</DependentUpon>
     </EmbeddedResource>
@@ -333,6 +430,41 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RaporCekici.resx">
+      <DependentUpon>RaporCekici.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RaporDorse.rdlc" />
+    <EmbeddedResource Include="RaporDorse.resx">
+      <DependentUpon>RaporDorse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RaporMusteriKarti.resx">
+      <DependentUpon>RaporMusteriKarti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RaporMusteriTakip.rdlc" />
+    <EmbeddedResource Include="RaporMusteriTakip.resx">
+      <DependentUpon>RaporMusteriTakip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RaporPersonel.rdlc" />
+    <EmbeddedResource Include="RaporPersonel.resx">
+      <DependentUpon>RaporPersonel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RaporSatisFatura.rdlc" />
+    <EmbeddedResource Include="RaporSatisFatura.resx">
+      <DependentUpon>RaporSatisFatura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RaporSofor.rdlc" />
+    <EmbeddedResource Include="RaporSofor.resx">
+      <DependentUpon>RaporSofor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RaporUye.rdlc" />
+    <EmbeddedResource Include="RaporUye.resx">
+      <DependentUpon>RaporUye.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RaporYakitTakip.rdlc" />
+    <EmbeddedResource Include="RaporYakitTakip.resx">
+      <DependentUpon>RaporYakitTakip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report.rdlc" />
     <EmbeddedResource Include="SatisFatura.resx">
       <DependentUpon>SatisFatura.cs</DependentUpon>
     </EmbeddedResource>
@@ -375,6 +507,24 @@
     <EmbeddedResource Include="YillikGelirListele.resx">
       <DependentUpon>YillikGelirListele.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="YukPlanlama.resx">
+      <DependentUpon>YukPlanlama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YukPlanlama1.resx">
+      <DependentUpon>YukPlanlama1.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataDataSet.xsc">
+      <DependentUpon>DataDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataDataSet.xss">
+      <DependentUpon>DataDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -404,6 +554,25 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Fatura.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\YükPlanlama.jpg" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
