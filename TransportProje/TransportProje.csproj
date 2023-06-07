@@ -51,7 +51,9 @@
     <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Messaging" />
@@ -94,6 +96,42 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DetaylıRaporCekici.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetaylıRaporCekici.Designer.cs">
+      <DependentUpon>DetaylıRaporCekici.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DetaylıRaporDorse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetaylıRaporDorse.Designer.cs">
+      <DependentUpon>DetaylıRaporDorse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DetaylıRaporPersonel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetaylıRaporPersonel.Designer.cs">
+      <DependentUpon>DetaylıRaporPersonel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DetaylıRaporSofor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetaylıRaporSofor.Designer.cs">
+      <DependentUpon>DetaylıRaporSofor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DetaylıRaporUye.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetaylıRaporUye.Designer.cs">
+      <DependentUpon>DetaylıRaporUye.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DetaylıRaporYakitTakip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetaylıRaporYakitTakip.Designer.cs">
+      <DependentUpon>DetaylıRaporYakitTakip.cs</DependentUpon>
     </Compile>
     <Compile Include="DorseEkle.cs">
       <SubType>Form</SubType>
@@ -369,6 +407,30 @@
     <EmbeddedResource Include="CekiciSil.resx">
       <DependentUpon>CekiciSil.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DetaylıRaporCekici.rdlc" />
+    <EmbeddedResource Include="DetaylıRaporCekici.resx">
+      <DependentUpon>DetaylıRaporCekici.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetaylıRaporDorse.rdlc" />
+    <EmbeddedResource Include="DetaylıRaporDorse.resx">
+      <DependentUpon>DetaylıRaporDorse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetaylıRaporPersonel.rdlc" />
+    <EmbeddedResource Include="DetaylıRaporPersonel.resx">
+      <DependentUpon>DetaylıRaporPersonel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetaylıRaporSofor.rdlc" />
+    <EmbeddedResource Include="DetaylıRaporSofor.resx">
+      <DependentUpon>DetaylıRaporSofor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetaylıRaporUye.rdlc" />
+    <EmbeddedResource Include="DetaylıRaporUye.resx">
+      <DependentUpon>DetaylıRaporUye.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetaylıRaporYakitTakip.rdlc" />
+    <EmbeddedResource Include="DetaylıRaporYakitTakip.resx">
+      <DependentUpon>DetaylıRaporYakitTakip.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DorseEkle.resx">
       <DependentUpon>DorseEkle.cs</DependentUpon>
     </EmbeddedResource>
@@ -557,7 +619,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Data.accdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Resources\YükPlanlama.jpg" />
     <Content Include="SqlServerTypes\readme.htm" />

@@ -833,8 +833,6 @@ namespace TransportProje
             PersonelVeriYukleBirimi();
             YakitVeriYukleYakitTipi();
             YakitVeriYukleDepoHacmi();
-
-
         }
 
 
@@ -1290,6 +1288,45 @@ namespace TransportProje
         private void groupBox3_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void personelToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            DetaylıRaporPersonel frmosman = new DetaylıRaporPersonel();
+            frmosman.ShowDialog();
+            
+        }
+
+        private void çekiciToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            DetaylıRaporCekici frmhamza = new DetaylıRaporCekici();
+            frmhamza.ShowDialog();
+
+        }
+
+        private void dorseToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            DetaylıRaporDorse frmdeneme = new DetaylıRaporDorse();
+            frmdeneme.ShowDialog();
+        }
+
+        private void soforToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DetaylıRaporSofor frmjuk = new DetaylıRaporSofor();
+            frmjuk.ShowDialog();
+        }
+
+        private void üyelerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DetaylıRaporUye frmkuk = new DetaylıRaporUye();
+            frmkuk.ShowDialog();
+        }
+
+        private void yakıtTakipToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            DetaylıRaporYakitTakip frmyak = new DetaylıRaporYakitTakip();
+            frmyak.ShowDialog();
+                
         }
     }
 }
