@@ -63,7 +63,18 @@ namespace TransportProje
             this.txtsoforisim = new System.Windows.Forms.MaskedTextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtmusteri = new System.Windows.Forms.MaskedTextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtAranan = new System.Windows.Forms.TextBox();
+            this.lblAlanalan = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.radyuklemeyeri = new System.Windows.Forms.RadioButton();
+            this.radyukno = new System.Windows.Forms.RadioButton();
+            this.cmbAramaTuru = new System.Windows.Forms.ComboBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.datagridithaalat)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // button7
@@ -124,6 +135,7 @@ namespace TransportProje
             this.frmdegistir.TabIndex = 83;
             this.frmdegistir.Text = "Güncelle";
             this.frmdegistir.UseVisualStyleBackColor = false;
+            this.frmdegistir.Click += new System.EventHandler(this.frmdegistir_Click);
             // 
             // button2
             // 
@@ -261,6 +273,7 @@ namespace TransportProje
             this.datagridithaalat.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.datagridithaalat.Size = new System.Drawing.Size(749, 488);
             this.datagridithaalat.TabIndex = 112;
+            this.datagridithaalat.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagridithaalat_CellContentClick);
             // 
             // lblsterlin
             // 
@@ -273,6 +286,7 @@ namespace TransportProje
             this.lblsterlin.Size = new System.Drawing.Size(46, 17);
             this.lblsterlin.TabIndex = 146;
             this.lblsterlin.Text = "label3";
+            this.lblsterlin.Click += new System.EventHandler(this.lblsterlin_Click);
             // 
             // lbleuro
             // 
@@ -285,6 +299,7 @@ namespace TransportProje
             this.lbleuro.Size = new System.Drawing.Size(46, 17);
             this.lbleuro.TabIndex = 145;
             this.lbleuro.Text = "label2";
+            this.lbleuro.Click += new System.EventHandler(this.lbleuro_Click);
             // 
             // lbldolar
             // 
@@ -297,6 +312,7 @@ namespace TransportProje
             this.lbldolar.Size = new System.Drawing.Size(46, 17);
             this.lbldolar.TabIndex = 144;
             this.lbldolar.Text = "label1";
+            this.lbldolar.Click += new System.EventHandler(this.lbldolar_Click);
             // 
             // timer1
             // 
@@ -588,6 +604,105 @@ namespace TransportProje
             this.txtmusteri.Size = new System.Drawing.Size(166, 20);
             this.txtmusteri.TabIndex = 152;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox2.Controls.Add(this.txtAranan);
+            this.groupBox2.Controls.Add(this.lblAlanalan);
+            this.groupBox2.Controls.Add(this.groupBox3);
+            this.groupBox2.Controls.Add(this.cmbAramaTuru);
+            this.groupBox2.Controls.Add(this.label17);
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.groupBox2.Location = new System.Drawing.Point(21, 502);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(332, 130);
+            this.groupBox2.TabIndex = 153;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Soför Hızlı Arama";
+            // 
+            // txtAranan
+            // 
+            this.txtAranan.Location = new System.Drawing.Point(154, 95);
+            this.txtAranan.Name = "txtAranan";
+            this.txtAranan.Size = new System.Drawing.Size(166, 20);
+            this.txtAranan.TabIndex = 4;
+            this.txtAranan.TextChanged += new System.EventHandler(this.txtAranan_TextChanged);
+            // 
+            // lblAlanalan
+            // 
+            this.lblAlanalan.AutoSize = true;
+            this.lblAlanalan.Location = new System.Drawing.Point(6, 102);
+            this.lblAlanalan.Name = "lblAlanalan";
+            this.lblAlanalan.Size = new System.Drawing.Size(34, 13);
+            this.lblAlanalan.TabIndex = 3;
+            this.lblAlanalan.Text = "Plaka";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.radyuklemeyeri);
+            this.groupBox3.Controls.Add(this.radyukno);
+            this.groupBox3.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.groupBox3.Location = new System.Drawing.Point(12, 51);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(308, 42);
+            this.groupBox3.TabIndex = 2;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Alan Seçimi";
+            // 
+            // radyuklemeyeri
+            // 
+            this.radyuklemeyeri.AutoSize = true;
+            this.radyuklemeyeri.Location = new System.Drawing.Point(121, 17);
+            this.radyuklemeyeri.Name = "radyuklemeyeri";
+            this.radyuklemeyeri.Size = new System.Drawing.Size(87, 17);
+            this.radyuklemeyeri.TabIndex = 0;
+            this.radyuklemeyeri.TabStop = true;
+            this.radyuklemeyeri.Text = "Yukleme Yeri";
+            this.radyuklemeyeri.UseVisualStyleBackColor = true;
+            this.radyuklemeyeri.CheckedChanged += new System.EventHandler(this.radtcno_CheckedChanged);
+            // 
+            // radyukno
+            // 
+            this.radyukno.AutoSize = true;
+            this.radyukno.Location = new System.Drawing.Point(6, 17);
+            this.radyukno.Name = "radyukno";
+            this.radyukno.Size = new System.Drawing.Size(64, 17);
+            this.radyukno.TabIndex = 0;
+            this.radyukno.TabStop = true;
+            this.radyukno.Text = "Yuk No ";
+            this.radyukno.UseVisualStyleBackColor = true;
+            this.radyukno.CheckedChanged += new System.EventHandler(this.radplaka_CheckedChanged);
+            // 
+            // cmbAramaTuru
+            // 
+            this.cmbAramaTuru.FormattingEnabled = true;
+            this.cmbAramaTuru.Items.AddRange(new object[] {
+            "İle Başlayan",
+            "İle Biten",
+            "İçeren"});
+            this.cmbAramaTuru.Location = new System.Drawing.Point(154, 24);
+            this.cmbAramaTuru.Name = "cmbAramaTuru";
+            this.cmbAramaTuru.Size = new System.Drawing.Size(166, 21);
+            this.cmbAramaTuru.TabIndex = 1;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(6, 50);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(0, 13);
+            this.label17.TabIndex = 0;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(6, 27);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(62, 13);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Arama Türü";
+            // 
             // YukPlanlama1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -595,6 +710,7 @@ namespace TransportProje
             this.BackgroundImage = global::TransportProje.Properties.Resources.Fatura;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1350, 729);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.txtmusteri);
             this.Controls.Add(this.txtsoforisim);
             this.Controls.Add(this.txtcekiciplaka);
@@ -633,6 +749,10 @@ namespace TransportProje
             this.Text = "YukPlanlama1";
             this.Load += new System.EventHandler(this.YukPlanlama1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.datagridithaalat)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -672,5 +792,14 @@ namespace TransportProje
         private System.Windows.Forms.MaskedTextBox txtsoforisim;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.MaskedTextBox txtmusteri;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox txtAranan;
+        private System.Windows.Forms.Label lblAlanalan;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.RadioButton radyuklemeyeri;
+        private System.Windows.Forms.RadioButton radyukno;
+        private System.Windows.Forms.ComboBox cmbAramaTuru;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label10;
     }
 }

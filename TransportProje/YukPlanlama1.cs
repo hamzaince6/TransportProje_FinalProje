@@ -314,5 +314,100 @@ namespace TransportProje
             // DataGridView'den seçili satırı kaldır
             datagridithaalat.Rows.Remove(datagridithaalat.CurrentRow);
         }
+
+        private void lbleuro_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbldolar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblsterlin_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void datagridithaalat_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void frmdegistir_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radplaka_CheckedChanged(object sender, EventArgs e)
+        {
+            lblAlanalan.Text = "Yuk No :";
+            txtAranan.Focus();
+            txtAranan.Text = "";
+        }
+
+        private void radtcno_CheckedChanged(object sender, EventArgs e)
+        {
+            lblAlanalan.Text = "Yukleme Yeri :";
+            txtAranan.Focus();
+            txtAranan.Text = "";
+        }
+
+        public void SoforHizliAra()
+        {
+            try
+            {
+
+
+
+                BaglantiAc();
+                DataSet ds = new DataSet();
+                string SorguTumKayitlar = "select * from ithaalat";
+                string SorguBayiilebaslayan = "Select * From ithaalat where YuklemeYeri Like '" + txtAranan.Text + "%'";
+                string SorguBayiilebiten = "Select * From ithaalat where YuklemeYeri Like '%" + txtAranan.Text + "'";
+                string SorguBayiiceren = "Select * From ithaalat where YuklemeYeri Like '%" + txtAranan.Text + "%'";
+
+                string SorguMalindegerilebaslayan = "Select * From ithaalat where YukNo Like '" + txtAranan.Text + "%'";
+                string SorguMalındegerilebiten = "Select * From ithaalat where YukNo Like '%" + txtAranan.Text + "'";
+                string SorguMalındegericeren = "Select * From ithaalat where YukNo Like '%" + txtAranan.Text + "%'";
+
+                if (cmbAramaTuru.Text == "İle Başlayan")
+                {
+                    if (radyuklemeyeri.Checked)
+                        SorguTumKayitlar = SorguBayiilebaslayan;
+                    else
+                        SorguTumKayitlar = SorguMalindegerilebaslayan;
+                }
+                else if (cmbAramaTuru.Text == "İle Biten")
+                {
+                    if (radyuklemeyeri.Checked)
+                        SorguTumKayitlar = SorguBayiilebiten;
+                    else
+                        SorguTumKayitlar = SorguMalındegerilebiten;
+                }
+                else if (cmbAramaTuru.Text == "İçeren")
+                {
+                    if (radyuklemeyeri.Checked)
+                        SorguTumKayitlar = SorguBayiiceren;
+                    else
+                        SorguTumKayitlar = SorguMalındegericeren;
+                }
+                OleDbDataAdapter da = new OleDbDataAdapter(SorguTumKayitlar, Baglanti);
+                da.Fill(ds, "ithaalat");
+                datagridithaalat.DataSource = ds.Tables["ithaalat"];
+                Baglanti.Close();
+            }
+            catch (Exception Hata)
+            {
+                //Sistem Hata Mesajını Göster
+                MessageBox.Show(Hata.Message, "Hızlı Arama Hata Penceresi");
+            }
+        }
+
+        private void txtAranan_TextChanged(object sender, EventArgs e)
+        {
+            SoforHizliAra();
+        }
     }
 }

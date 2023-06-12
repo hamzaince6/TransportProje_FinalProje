@@ -575,6 +575,9 @@
     <EmbeddedResource Include="YukPlanlama1.resx">
       <DependentUpon>YukPlanlama1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="YukPlanlama2.resx">
+      <DependentUpon>YukPlanlama2.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="DataDataSet.xsc">
       <DependentUpon>DataDataSet.xsd</DependentUpon>
     </None>

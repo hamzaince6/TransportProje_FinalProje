@@ -82,14 +82,14 @@ namespace TransportProje
             this.chkplaka12 = new System.Windows.Forms.CheckBox();
             this.chktcno = new System.Windows.Forms.CheckBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.cmbAramaTuru = new System.Windows.Forms.ComboBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.radplaka = new System.Windows.Forms.RadioButton();
-            this.radtcno = new System.Windows.Forms.RadioButton();
-            this.lblAlanalan = new System.Windows.Forms.Label();
             this.txtAranan = new System.Windows.Forms.TextBox();
+            this.lblAlanalan = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.radtcno = new System.Windows.Forms.RadioButton();
+            this.radplaka = new System.Windows.Forms.RadioButton();
+            this.cmbAramaTuru = new System.Windows.Forms.ComboBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridSofor)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -680,35 +680,24 @@ namespace TransportProje
             this.groupBox2.TabIndex = 113;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Soför Hızlı Arama";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
-            // label1
+            // txtAranan
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Arama Türü";
+            this.txtAranan.Location = new System.Drawing.Point(96, 95);
+            this.txtAranan.Name = "txtAranan";
+            this.txtAranan.Size = new System.Drawing.Size(140, 20);
+            this.txtAranan.TabIndex = 4;
+            this.txtAranan.TextChanged += new System.EventHandler(this.txtAranan_TextChanged);
             // 
-            // label17
+            // lblAlanalan
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(6, 50);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(0, 13);
-            this.label17.TabIndex = 0;
-            // 
-            // cmbAramaTuru
-            // 
-            this.cmbAramaTuru.FormattingEnabled = true;
-            this.cmbAramaTuru.Items.AddRange(new object[] {
-            "İle Başlayan",
-            "İle Biten",
-            "İçeren"});
-            this.cmbAramaTuru.Location = new System.Drawing.Point(96, 24);
-            this.cmbAramaTuru.Name = "cmbAramaTuru";
-            this.cmbAramaTuru.Size = new System.Drawing.Size(140, 21);
-            this.cmbAramaTuru.TabIndex = 1;
+            this.lblAlanalan.AutoSize = true;
+            this.lblAlanalan.Location = new System.Drawing.Point(6, 102);
+            this.lblAlanalan.Name = "lblAlanalan";
+            this.lblAlanalan.Size = new System.Drawing.Size(34, 13);
+            this.lblAlanalan.TabIndex = 3;
+            this.lblAlanalan.Text = "Plaka";
             // 
             // groupBox3
             // 
@@ -722,18 +711,6 @@ namespace TransportProje
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Alan Seçimi";
             // 
-            // radplaka
-            // 
-            this.radplaka.AutoSize = true;
-            this.radplaka.Location = new System.Drawing.Point(6, 17);
-            this.radplaka.Name = "radplaka";
-            this.radplaka.Size = new System.Drawing.Size(52, 17);
-            this.radplaka.TabIndex = 0;
-            this.radplaka.TabStop = true;
-            this.radplaka.Text = "Plaka";
-            this.radplaka.UseVisualStyleBackColor = true;
-            this.radplaka.CheckedChanged += new System.EventHandler(this.radplaka_CheckedChanged);
-            // 
             // radtcno
             // 
             this.radtcno.AutoSize = true;
@@ -746,22 +723,46 @@ namespace TransportProje
             this.radtcno.UseVisualStyleBackColor = true;
             this.radtcno.CheckedChanged += new System.EventHandler(this.radtcno_CheckedChanged);
             // 
-            // lblAlanalan
+            // radplaka
             // 
-            this.lblAlanalan.AutoSize = true;
-            this.lblAlanalan.Location = new System.Drawing.Point(6, 102);
-            this.lblAlanalan.Name = "lblAlanalan";
-            this.lblAlanalan.Size = new System.Drawing.Size(34, 13);
-            this.lblAlanalan.TabIndex = 3;
-            this.lblAlanalan.Text = "Plaka";
+            this.radplaka.AutoSize = true;
+            this.radplaka.Location = new System.Drawing.Point(6, 17);
+            this.radplaka.Name = "radplaka";
+            this.radplaka.Size = new System.Drawing.Size(52, 17);
+            this.radplaka.TabIndex = 0;
+            this.radplaka.TabStop = true;
+            this.radplaka.Text = "Plaka";
+            this.radplaka.UseVisualStyleBackColor = true;
+            this.radplaka.CheckedChanged += new System.EventHandler(this.radplaka_CheckedChanged);
             // 
-            // txtAranan
+            // cmbAramaTuru
             // 
-            this.txtAranan.Location = new System.Drawing.Point(96, 95);
-            this.txtAranan.Name = "txtAranan";
-            this.txtAranan.Size = new System.Drawing.Size(140, 20);
-            this.txtAranan.TabIndex = 4;
-            this.txtAranan.TextChanged += new System.EventHandler(this.txtAranan_TextChanged);
+            this.cmbAramaTuru.FormattingEnabled = true;
+            this.cmbAramaTuru.Items.AddRange(new object[] {
+            "İle Başlayan",
+            "İle Biten",
+            "İçeren"});
+            this.cmbAramaTuru.Location = new System.Drawing.Point(96, 24);
+            this.cmbAramaTuru.Name = "cmbAramaTuru";
+            this.cmbAramaTuru.Size = new System.Drawing.Size(140, 21);
+            this.cmbAramaTuru.TabIndex = 1;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(6, 50);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(0, 13);
+            this.label17.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 27);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(62, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Arama Türü";
             // 
             // KaraSoforTablosu
             // 
